@@ -1,0 +1,11 @@
+name: rs100_discussion
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - ipywidgets
+  - jupyterlab
+  - matplotlib
+  - numpy
+  - pandas
+  - openpyxl
