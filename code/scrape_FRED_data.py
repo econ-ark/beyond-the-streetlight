@@ -4,11 +4,12 @@ import fredpy as fp
 import matplotlib.pyplot as plt
 
 fp.api_key = "c735c085b4e162a17326871bc1d5c625"
-win = ['01-01-2006','12-01-2017']
+win = ['01-01-2007','12-01-2017']
+win2 = ['01-01-2006','12-01-2017']
 unemp = fp.series("UNRATE").window(win).as_frequency(freq='Q')
 
-pce_Q = fp.series("PCEPI").window(win).apc().as_frequency(freq='Q')
-pce_core_Q = fp.series("PCEPILFE").window(win).apc().as_frequency(freq='Q')
+pce_Q = fp.series("PCEPI").window(win2).apc().as_frequency(freq='Q')
+pce_core_Q = fp.series("PCEPILFE").window(win2).apc().as_frequency(freq='Q')
 
 grPCE_Q = fp.series("PCEC96").window(win).pc(annualized=True).as_frequency(freq='Q')
 
