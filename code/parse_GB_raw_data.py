@@ -32,4 +32,5 @@ result_df = pd.concat([date_df, unemp_df, headline_df, core_df, cons_df], axis=1
 # Print the final result
 print(result_df)
 
-result_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/GBweb_parsed.xlsx', index=False)
+df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/GB.csv')
+# result_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/GBweb_parsed.xlsx', index=False)

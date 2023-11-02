@@ -10,3 +10,10 @@ dependencies:
   - pandas
   - openpyxl
   - fredapi
+  - lxml
+  - requests
+  - statsmodels
+  - pip:
+    - pandas-datareader
+    - fredpy
+
