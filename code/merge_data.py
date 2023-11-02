@@ -5,19 +5,25 @@ GB = pd.read_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/
 SPF = pd.read_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/SPF.csv')
 FRED = pd.read_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/FRED.csv')
 
-# Add NaN values to SPF and GB for the dates before 2007 Q1 where there is FRED data for
-nan_rows_GB = pd.DataFrame(np.nan, index=np.arange(FRED.shape[0] - GB.shape[0]), columns=GB.columns)
-GB = pd.concat([nan_rows_GB, GB], ignore_index=True)
-
-nan_rows_SPF = pd.DataFrame(np.nan, index=np.arange(FRED.shape[0] - SPF.shape[0]), columns=SPF.columns)
-SPF = pd.concat([nan_rows_SPF, SPF], ignore_index=True)
-
-# Remove the first two columns of GB and SPF that capture dates and indexing
+#Remove the first two columns of GB and SPF that capture dates and indexing
 GB = GB.iloc[:, 2:]
 SPF = SPF.iloc[:, 2:]
 
-merged_df = pd.concat([FRED, GB, SPF], axis=1)
+# Remove the first two rows of FRED
+FRED = FRED.iloc[2:]
 
+# Add two rows of NaN values to the top of GB and SPF
+nan_rows_top = pd.DataFrame(np.nan, index=np.arange(2), columns=GB.columns)
+GB = pd.concat([nan_rows_top, GB], ignore_index=True)
+SPF = pd.concat([nan_rows_top, SPF], ignore_index=True)
+
+# Reset the index of the individual dataframes
+GB = GB.reset_index(drop=True)
+SPF = SPF.reset_index(drop=True)
+FRED = FRED.reset_index(drop=True)
+
+merged_df = pd.concat([FRED, GB, SPF], axis=1)
+print(merged_df.shape)
 print(merged_df)
 
 merged_df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/merged.csv')

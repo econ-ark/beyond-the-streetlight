@@ -47,4 +47,4 @@ print(GB_df)
 
 # Uncomment these final lines to get the output of your choice
 GB_df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/GB.csv')
-GB_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/GB_parsed.xlsx', index=False)
+# GB_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/GB_parsed.xlsx', index=False)

@@ -35,4 +35,4 @@ print(SPF_df)
 
 # Uncomment these final lines to get the output of your choice
 SPF_df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/SPF.csv')
-SPF_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/SPF_parsed.xlsx', index=False)
+# SPF_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/SPF_parsed.xlsx', index=False)
