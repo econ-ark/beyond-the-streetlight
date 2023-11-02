@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the Excel file
-excel_file = pd.ExcelFile('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/GBweb_Row_Format.xlsx') 
+excel_file = pd.ExcelFile('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/raw/GBweb_Row_Format.xlsx') 
 
 # First for unemployment; note, we want from 2007, Q1 onward to align with SPF data
 df = excel_file.parse('UNEMP')
@@ -32,5 +32,19 @@ result_df = pd.concat([date_df, unemp_df, headline_df, core_df, cons_df], axis=1
 # Print the final result
 print(result_df)
 
-df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/GB.csv')
-# result_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/GBweb_parsed.xlsx', index=False)
+# Now, since Greenbook has two forecast per quarter, we extract the final forecast for a given
+# quarter, since this gives us the best chance at getting the FED's forecast *after* the SPF
+# forecast is made.
+
+# Extract odd-numbered rows (1, 3, ..., 43)
+GB_df = result_df.iloc[1::2]
+
+# Reset the index for the modified DataFrame
+GB_df.reset_index(drop=True, inplace=True)
+
+# Continue working with the 'odd_rows_df' DataFrame
+print(GB_df)
+
+# Uncomment these final lines to get the output of your choice
+GB_df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/GB.csv')
+GB_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/GB_parsed.xlsx', index=False)
