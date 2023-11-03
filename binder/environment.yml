@@ -16,4 +16,5 @@ dependencies:
   - pip:
     - pandas-datareader
     - fredpy
+    - statsmodels
 

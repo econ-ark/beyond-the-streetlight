@@ -25,7 +25,7 @@ def graph(df, x_column, y_columns, title):
     plt.xlim(df[x_column].iloc[0], df[x_column].iloc[-1])
 
     # Use date locator and formatter for x-axis
-    plt.gca().xaxis.set_major_locator(mdates.YearLocator(1))
+    plt.gca().xaxis.set_major_locator(mdates.YearLocator(base=3))
     plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y Q%1'))
     #plt.show()
 
@@ -47,25 +47,7 @@ save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHu
 plt.savefig(save_path, format='png')
 plt.show()
 
-# 2. Headline inflation 
-x_column = "date"  
-y_columns = ["YoY_Inflation(A)", "YoY_Inflation(GB)", "YoY_Inflation(SPF)"]
-
-graph(data, x_column, y_columns, "Inflation (PCE) forecast errors")
-save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/inf_forecast.png" 
-plt.savefig(save_path, format='png')
-plt.show()
-
-# 3. Core Inflation 
-x_column = "date"  
-y_columns = ["YoY_Core_Inflation(A)", "YoY_Core_Inflation(GB)", "YoY_Core_Inflation(SPF)"]
-
-graph(data, x_column, y_columns, "Core inflation (PCE) forecast errors")
-save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/core_inf_forecast.png" 
-plt.savefig(save_path, format='png')
-plt.show()
-
-# 4. Growth in real PCE 
+# 2. Growth in real PCE 
 x_column = "date"  
 y_columns = ["YoY_rPCE(A)", "YoY_rPCE(GB)", "YoY_rPCE(SPF)"]
 

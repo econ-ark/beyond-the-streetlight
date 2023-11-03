@@ -9,6 +9,13 @@ FRED = pd.read_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/researc
 GB = GB.iloc[:, 2:]
 SPF = SPF.iloc[:, 2:]
 
+#Remove first row of FRED
+FRED = FRED.iloc[1:,:]
+
+GB.reset_index(drop=True, inplace=True)
+SPF.reset_index(drop=True, inplace=True)
+FRED.reset_index(drop=True, inplace=True)
+
 merged_df = pd.concat([FRED, GB, SPF], axis=1)
 print(merged_df.shape)
 print(merged_df)
