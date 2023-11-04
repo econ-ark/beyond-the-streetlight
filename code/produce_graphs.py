@@ -36,22 +36,22 @@ forecast = pd.read_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/res
 forecast['date'] = pd.to_datetime(forecast['date'])
 
 # Now retain only the annual forecasts/actual changes and the date column
-data = forecast.iloc[:, [1] + list(range(-12,0))]
+# data = forecast.iloc[:, [1] + list(range(-12,0))]
 
 # 1. Unemployment 
 x_column = "date"  
-y_columns = ["YoY_Unemp", "YoY_Unemp_GB", "YoY_Unemp_SPF"]
+y_columns = ["FRED_unemp", "GB_unemp", "SPF_unemp"]
 
-graph(data, x_column, y_columns, "Unemployment forecasts vs data")
+graph(forecast, x_column, y_columns, "Unemployment forecasts vs data")
 save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/unemp_forecast.png" 
 plt.savefig(save_path, format='png')
 plt.show()
 
 # 2. Growth in real PCE 
 x_column = "date"  
-y_columns = ["YoY_rPCE", "YoY_rPCE_GB", "YoY_rPCE_SPF"]
+y_columns = ["FRED_cons", "GB_cons", "SPF_cons"]
 
-graph(data, x_column, y_columns, "Real consumption growth forecasts vs data")
+graph(forecast, x_column, y_columns, "Real consumption growth forecasts vs data")
 save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/cons_forecast.png" 
 plt.savefig(save_path, format='png')
 plt.show()

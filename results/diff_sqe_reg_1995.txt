@@ -1,0 +1,60 @@
+Regression Summary for diff_error_unemp:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:       diff_error_unemp   R-squared:                       0.001
+Model:                            OLS   Adj. R-squared:                 -0.010
+Method:                 Least Squares   F-statistic:                   0.09942
+Date:                Sat, 04 Nov 2023   Prob (F-statistic):              0.753
+Time:                        08:40:09   Log-Likelihood:                -58.825
+No. Observations:                  96   AIC:                             121.6
+Df Residuals:                      94   BIC:                             126.8
+Df Model:                           1                                         
+Covariance Type:                  HC3                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Constant       2.8267      9.229      0.306      0.759     -15.261      20.915
+Year          -0.0014      0.005     -0.315      0.753      -0.010       0.008
+==============================================================================
+Omnibus:                      112.991   Durbin-Watson:                   1.549
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             2205.426
+Skew:                          -3.850   Prob(JB):                         0.00
+Kurtosis:                      25.183   Cond. No.                     5.82e+05
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+[2] The condition number is large, 5.82e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.
+Mean Squared Error for diff_error_unemp: 0.1994
+Durbin-Watson Statistic for diff_error_unemp: 1.5488281262996615
+Regression Summary for diff_error_cons:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        diff_error_cons   R-squared:                       0.049
+Model:                            OLS   Adj. R-squared:                  0.038
+Method:                 Least Squares   F-statistic:                     6.226
+Date:                Sat, 04 Nov 2023   Prob (F-statistic):             0.0143
+Time:                        08:40:09   Log-Likelihood:                -187.00
+No. Observations:                  96   AIC:                             378.0
+Df Residuals:                      94   BIC:                             383.1
+Df Model:                           1                                         
+Covariance Type:                  HC3                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Constant    -111.7682     44.617     -2.505      0.012    -199.217     -24.320
+Year           0.0554      0.022      2.495      0.013       0.012       0.099
+==============================================================================
+Omnibus:                       40.259   Durbin-Watson:                   0.861
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              118.128
+Skew:                          -1.434   Prob(JB):                     2.23e-26
+Kurtosis:                       7.616   Cond. No.                     5.82e+05
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+[2] The condition number is large, 5.82e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.
+Mean Squared Error for diff_error_cons: 2.8804
+Durbin-Watson Statistic for diff_error_cons: 0.8614862630359085
