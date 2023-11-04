@@ -26,7 +26,7 @@ def graph(df, x_column, y_columns, title):
 
     # Use date locator and formatter for x-axis
     plt.gca().xaxis.set_major_locator(mdates.YearLocator(base=3))
-    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y Q%1'))
+    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y'))
     #plt.show()
 
 # Now retrieve the dataframe to produce graphs
@@ -40,18 +40,18 @@ data = forecast.iloc[:, [1] + list(range(-12,0))]
 
 # 1. Unemployment 
 x_column = "date"  
-y_columns = ["YoY_Unemployment(A)", "YoY_Unemployment(GB)", "YoY_Unemployment(SPF)"]
+y_columns = ["YoY_Unemp", "YoY_Unemp_GB", "YoY_Unemp_SPF"]
 
-graph(data, x_column, y_columns, "Unemployment forecast errors")
+graph(data, x_column, y_columns, "Unemployment forecasts vs data")
 save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/unemp_forecast.png" 
 plt.savefig(save_path, format='png')
 plt.show()
 
 # 2. Growth in real PCE 
 x_column = "date"  
-y_columns = ["YoY_rPCE(A)", "YoY_rPCE(GB)", "YoY_rPCE(SPF)"]
+y_columns = ["YoY_rPCE", "YoY_rPCE_GB", "YoY_rPCE_SPF"]
 
-graph(data, x_column, y_columns, "Real consumption growth forecast errors")
+graph(data, x_column, y_columns, "Real consumption growth forecasts vs data")
 save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/cons_forecast.png" 
 plt.savefig(save_path, format='png')
 plt.show()

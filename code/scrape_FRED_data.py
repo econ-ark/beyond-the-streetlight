@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 fp.api_key = "c735c085b4e162a17326871bc1d5c625"
 win = ['01-01-1982','12-01-2017']
-win2 = ['10-01-1981','12-01-2017']
+win2 = ['10-01-1981','12-01-2018']
 unemp = fp.series("UNRATE").window(win2).as_frequency(freq='Q')
 
 #pce_Q = fp.series("PCEPI").window(win2).apc().as_frequency(freq='Q')
