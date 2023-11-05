@@ -152,7 +152,7 @@ with open(summary_file_path, 'w') as summary_file:
 plt.tight_layout()
 
 # Save both figures
-if ss_q == 0:
+if sample_size == 0:
     save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1983.png" 
     save_path2 = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1983_GB_cons_only.png"
     save_path3 = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1983_SPF_cons_only.png"
