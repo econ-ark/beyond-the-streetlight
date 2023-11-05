@@ -152,18 +152,18 @@ with open(summary_file_path, 'w') as summary_file:
 plt.tight_layout()
 
 # Save both figures
-if sample_size == 0:
-    save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1983.png" 
-    save_path2 = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1983_GB_cons_only.png"
-    save_path3 = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1983_SPF_cons_only.png"
-else:
-    save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1995.png"
-    save_path2 = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1995_GB_cons_only.png"
-    save_path3 = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1995_SPF_cons_only.png"
+#if sample_size == 0:
+#    save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1983.png" 
+#    save_path2 = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1983_GB_cons_only.png"
+#    save_path3 = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1983_SPF_cons_only.png"
+#else:
+#    save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1995.png"
+#    save_path2 = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1995_GB_cons_only.png"
+#    save_path3 = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1995_SPF_cons_only.png"
 
-plt.savefig(save_path, format='png')
-plt.savefig(save_path2, format='png', bbox_inches='tight')
-plt.savefig(save_path3, format='png', bbox_inches='tight')
+#plt.savefig(save_path, format='png')
+#plt.savefig(save_path2, format='png', bbox_inches='tight')
+#plt.savefig(save_path3, format='png', bbox_inches='tight')
 
 # Show both figures
 plt.show()
