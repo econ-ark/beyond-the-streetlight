@@ -5,7 +5,7 @@ Dep. Variable:       diff_error_unemp   R-squared:                       0.001
 Model:                            OLS   Adj. R-squared:                 -0.010
 Method:                 Least Squares   F-statistic:                   0.09942
 Date:                Sat, 04 Nov 2023   Prob (F-statistic):              0.753
-Time:                        15:25:35   Log-Likelihood:                -58.825
+Time:                        17:05:34   Log-Likelihood:                -58.825
 No. Observations:                  96   AIC:                             121.6
 Df Residuals:                      94   BIC:                             126.8
 Df Model:                           1                                         
@@ -33,7 +33,7 @@ Dep. Variable:        diff_error_cons   R-squared:                       0.049
 Model:                            OLS   Adj. R-squared:                  0.038
 Method:                 Least Squares   F-statistic:                     6.226
 Date:                Sat, 04 Nov 2023   Prob (F-statistic):             0.0143
-Time:                        15:25:35   Log-Likelihood:                -187.00
+Time:                        17:05:34   Log-Likelihood:                -187.00
 No. Observations:                  96   AIC:                             378.0
 Df Residuals:                      94   BIC:                             383.1
 Df Model:                           1                                         

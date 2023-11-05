@@ -1,0 +1,112 @@
+Regression Summary for GB_error_unemp:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:         GB_error_unemp   R-squared:                       0.000
+Model:                            OLS   Adj. R-squared:                 -0.011
+Method:                 Least Squares   F-statistic:                  0.002756
+Date:                Sat, 04 Nov 2023   Prob (F-statistic):              0.958
+Time:                        20:11:46   Log-Likelihood:                -83.102
+No. Observations:                  96   AIC:                             170.2
+Df Residuals:                      94   BIC:                             175.3
+Df Model:                           1                                         
+Covariance Type:                  HC3                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Constant       0.4819      0.060      8.098      0.000       0.365       0.599
+Year_d         0.0003      0.005      0.052      0.958      -0.009       0.010
+==============================================================================
+Omnibus:                      102.374   Durbin-Watson:                   0.374
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1104.899
+Skew:                           3.632   Prob(JB):                    1.19e-240
+Kurtosis:                      17.948   Cond. No.                         6.92
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+Mean Squared Error for GB_error_unemp: 0.3307
+Durbin-Watson Statistic for GB_error_unemp: 0.37435740261471984
+Regression Summary for SPF_error_unemp:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        SPF_error_unemp   R-squared:                       0.000
+Model:                            OLS   Adj. R-squared:                 -0.010
+Method:                 Least Squares   F-statistic:                   0.05909
+Date:                Sat, 04 Nov 2023   Prob (F-statistic):              0.808
+Time:                        20:11:46   Log-Likelihood:                -90.066
+No. Observations:                  96   AIC:                             184.1
+Df Residuals:                      94   BIC:                             189.3
+Df Model:                           1                                         
+Covariance Type:                  HC3                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Constant       0.5130      0.064      8.018      0.000       0.388       0.638
+Year_d         0.0012      0.005      0.243      0.808      -0.009       0.011
+==============================================================================
+Omnibus:                       92.429   Durbin-Watson:                   0.298
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              741.839
+Skew:                           3.286   Prob(JB):                    8.16e-162
+Kurtosis:                      14.928   Cond. No.                         6.92
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+Mean Squared Error for SPF_error_unemp: 0.3823
+Durbin-Watson Statistic for SPF_error_unemp: 0.29813775149009153
+Regression Summary for GB_error_cons:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          GB_error_cons   R-squared:                       0.102
+Model:                            OLS   Adj. R-squared:                  0.093
+Method:                 Least Squares   F-statistic:                     12.67
+Date:                Sat, 04 Nov 2023   Prob (F-statistic):           0.000584
+Time:                        20:11:46   Log-Likelihood:                -89.013
+No. Observations:                  96   AIC:                             182.0
+Df Residuals:                      94   BIC:                             187.2
+Df Model:                           1                                         
+Covariance Type:                  HC3                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Constant       0.7881      0.064     12.386      0.000       0.663       0.913
+Year_d        -0.0298      0.008     -3.560      0.000      -0.046      -0.013
+==============================================================================
+Omnibus:                       14.166   Durbin-Watson:                   1.143
+Prob(Omnibus):                  0.001   Jarque-Bera (JB):               15.539
+Skew:                           0.948   Prob(JB):                     0.000422
+Kurtosis:                       3.541   Cond. No.                         6.92
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+Mean Squared Error for GB_error_cons: 0.3740
+Durbin-Watson Statistic for GB_error_cons: 1.1426734010087216
+Regression Summary for SPF_error_cons:
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:         SPF_error_cons   R-squared:                       0.106
+Model:                            OLS   Adj. R-squared:                  0.096
+Method:                 Least Squares   F-statistic:                     13.56
+Date:                Sat, 04 Nov 2023   Prob (F-statistic):           0.000385
+Time:                        20:11:46   Log-Likelihood:                -118.37
+No. Observations:                  96   AIC:                             240.7
+Df Residuals:                      94   BIC:                             245.9
+Df Model:                           1                                         
+Covariance Type:                  HC3                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Constant       0.9504      0.086     11.005      0.000       0.781       1.120
+Year_d        -0.0412      0.011     -3.683      0.000      -0.063      -0.019
+==============================================================================
+Omnibus:                       13.700   Durbin-Watson:                   0.532
+Prob(Omnibus):                  0.001   Jarque-Bera (JB):               14.816
+Skew:                           0.915   Prob(JB):                     0.000606
+Kurtosis:                       3.597   Cond. No.                         6.92
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+Mean Squared Error for SPF_error_cons: 0.6895
+Durbin-Watson Statistic for SPF_error_cons: 0.5315308817010755

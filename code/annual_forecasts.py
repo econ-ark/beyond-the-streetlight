@@ -39,7 +39,13 @@ print(avg_values.iloc[3:-1].shape)
 annual_forecast_df['FRED_unemp'] = diff_values.iloc[4:].reset_index(drop=True)
 annual_forecast_df['FRED_cons'] = avg_values.iloc[3:-1].reset_index(drop=True)
 
-print(annual_forecast_df)
+print(annual_forecast_df.iloc[67:77,:])
+
+decimal = False  # Set to the desired number of decimal places or False to disable formatting
+
+if decimal is not False:
+    for column in annual_forecast_df.columns[1:]:
+        annual_forecast_df[column] = annual_forecast_df[column].apply(lambda x: f"{x:.{decimal}f}")
 
 annual_forecast_df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/forecast.csv')
 # annual_forecast_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/forecast.xlsx', index=False)

@@ -5,7 +5,7 @@ Dep. Variable:         GB_error_unemp   R-squared:                       0.000
 Model:                            OLS   Adj. R-squared:                 -0.007
 Method:                 Least Squares   F-statistic:                   0.01993
 Date:                Sat, 04 Nov 2023   Prob (F-statistic):              0.888
-Time:                        08:39:34   Log-Likelihood:                -275.35
+Time:                        16:56:33   Log-Likelihood:                -275.35
 No. Observations:                 144   AIC:                             554.7
 Df Residuals:                     142   BIC:                             560.6
 Df Model:                           1                                         
@@ -13,19 +13,17 @@ Covariance Type:                  HC3
 ==============================================================================
                  coef    std err          z      P>|z|      [0.025      0.975]
 ------------------------------------------------------------------------------
-Constant       4.1705     25.342      0.165      0.869     -45.498      53.839
-Year          -0.0018      0.013     -0.141      0.888      -0.027       0.023
+Constant       0.5832      0.138      4.217      0.000       0.312       0.854
+Year_d        -0.0018      0.013     -0.141      0.888      -0.027       0.023
 ==============================================================================
 Omnibus:                      197.996   Durbin-Watson:                   0.492
 Prob(Omnibus):                  0.000   Jarque-Bera (JB):             8075.188
 Skew:                           5.618   Prob(JB):                         0.00
-Kurtosis:                      37.923   Cond. No.                     3.85e+05
+Kurtosis:                      37.923   Cond. No.                         10.4
 ==============================================================================
 
 Notes:
 [1] Standard Errors are heteroscedasticity robust (HC3)
-[2] The condition number is large, 3.85e+05. This might indicate that there are
-strong multicollinearity or other numerical problems.
 Mean Squared Error for GB_error_unemp: 2.6817
 Durbin-Watson Statistic for GB_error_unemp: 0.4920240430405112
 Regression Summary for SPF_error_unemp:
@@ -35,7 +33,7 @@ Dep. Variable:        SPF_error_unemp   R-squared:                       0.000
 Model:                            OLS   Adj. R-squared:                 -0.007
 Method:                 Least Squares   F-statistic:                   0.06659
 Date:                Sat, 04 Nov 2023   Prob (F-statistic):              0.797
-Time:                        08:39:34   Log-Likelihood:                -282.54
+Time:                        16:56:33   Log-Likelihood:                -282.54
 No. Observations:                 144   AIC:                             569.1
 Df Residuals:                     142   BIC:                             575.0
 Df Model:                           1                                         
@@ -43,21 +41,19 @@ Covariance Type:                  HC3
 ==============================================================================
                  coef    std err          z      P>|z|      [0.025      0.975]
 ------------------------------------------------------------------------------
-Constant      -5.9333     25.325     -0.234      0.815     -55.570      43.704
-Year           0.0033      0.013      0.258      0.796      -0.022       0.028
+Constant       0.6262      0.145      4.310      0.000       0.341       0.911
+Year_d         0.0033      0.013      0.258      0.796      -0.022       0.028
 ==============================================================================
 Omnibus:                      189.795   Durbin-Watson:                   0.358
 Prob(Omnibus):                  0.000   Jarque-Bera (JB):             6436.745
 Skew:                           5.316   Prob(JB):                         0.00
-Kurtosis:                      33.980   Cond. No.                     3.85e+05
+Kurtosis:                      33.980   Cond. No.                         10.4
 ==============================================================================
 
 Notes:
 [1] Standard Errors are heteroscedasticity robust (HC3)
-[2] The condition number is large, 3.85e+05. This might indicate that there are
-strong multicollinearity or other numerical problems.
 Mean Squared Error for SPF_error_unemp: 2.9632
-Durbin-Watson Statistic for SPF_error_unemp: 0.357992221866679
+Durbin-Watson Statistic for SPF_error_unemp: 0.3579922218666789
 Regression Summary for GB_error_cons:
                             OLS Regression Results                            
 ==============================================================================
@@ -65,7 +61,7 @@ Dep. Variable:          GB_error_cons   R-squared:                       0.184
 Model:                            OLS   Adj. R-squared:                  0.179
 Method:                 Least Squares   F-statistic:                     17.02
 Date:                Sat, 04 Nov 2023   Prob (F-statistic):           6.28e-05
-Time:                        08:39:34   Log-Likelihood:                -344.02
+Time:                        16:56:33   Log-Likelihood:                -344.02
 No. Observations:                 144   AIC:                             692.0
 Df Residuals:                     142   BIC:                             698.0
 Df Model:                           1                                         
@@ -73,19 +69,17 @@ Covariance Type:                  HC3
 ==============================================================================
                  coef    std err          z      P>|z|      [0.025      0.975]
 ------------------------------------------------------------------------------
-Constant     243.4171     58.747      4.144      0.000     128.276     358.559
-Year          -0.1208      0.029     -4.125      0.000      -0.178      -0.063
+Constant       1.8015      0.224      8.033      0.000       1.362       2.241
+Year_d        -0.1208      0.029     -4.125      0.000      -0.178      -0.063
 ==============================================================================
 Omnibus:                      120.873   Durbin-Watson:                   1.097
 Prob(Omnibus):                  0.000   Jarque-Bera (JB):             1484.696
 Skew:                           2.930   Prob(JB):                         0.00
-Kurtosis:                      17.598   Cond. No.                     3.85e+05
+Kurtosis:                      17.598   Cond. No.                         10.4
 ==============================================================================
 
 Notes:
 [1] Standard Errors are heteroscedasticity robust (HC3)
-[2] The condition number is large, 3.85e+05. This might indicate that there are
-strong multicollinearity or other numerical problems.
 Mean Squared Error for GB_error_cons: 6.9601
 Durbin-Watson Statistic for GB_error_cons: 1.0966114427460374
 Regression Summary for SPF_error_cons:
@@ -95,7 +89,7 @@ Dep. Variable:         SPF_error_cons   R-squared:                       0.087
 Model:                            OLS   Adj. R-squared:                  0.081
 Method:                 Least Squares   F-statistic:                     12.32
 Date:                Sat, 04 Nov 2023   Prob (F-statistic):           0.000599
-Time:                        08:39:34   Log-Likelihood:                -347.77
+Time:                        16:56:33   Log-Likelihood:                -347.77
 No. Observations:                 144   AIC:                             699.5
 Df Residuals:                     142   BIC:                             705.5
 Df Model:                           1                                         
@@ -103,18 +97,16 @@ Covariance Type:                  HC3
 ==============================================================================
                  coef    std err          z      P>|z|      [0.025      0.975]
 ------------------------------------------------------------------------------
-Constant     163.1074     45.976      3.548      0.000      72.995     253.220
-Year          -0.0805      0.023     -3.511      0.000      -0.125      -0.036
+Constant       2.0018      0.229      8.743      0.000       1.553       2.451
+Year_d        -0.0805      0.023     -3.511      0.000      -0.125      -0.036
 ==============================================================================
 Omnibus:                       69.541   Durbin-Watson:                   0.703
 Prob(Omnibus):                  0.000   Jarque-Bera (JB):              198.320
 Skew:                           1.991   Prob(JB):                     8.62e-44
-Kurtosis:                       7.147   Cond. No.                     3.85e+05
+Kurtosis:                       7.147   Cond. No.                         10.4
 ==============================================================================
 
 Notes:
 [1] Standard Errors are heteroscedasticity robust (HC3)
-[2] The condition number is large, 3.85e+05. This might indicate that there are
-strong multicollinearity or other numerical problems.
 Mean Squared Error for SPF_error_cons: 7.3324
 Durbin-Watson Statistic for SPF_error_cons: 0.7034481265335076

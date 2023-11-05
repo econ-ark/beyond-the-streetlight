@@ -62,6 +62,12 @@ results_df = results_df.reset_index(drop=True)
 # Print the final result
 print(results_df)
 
+decimal = False  # Set to the desired number of decimal places or False to disable formatting
+
+if decimal is not False:
+    for column in results_df.columns[1:]:
+        results_df[column] = results_df[column].apply(lambda x: f"{x:.{decimal}f}")
+
 # Uncomment these final lines to get the output of your choice
 results_df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/SPF.csv')
 # SPF_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/SPF_parsed.xlsx', index=False)

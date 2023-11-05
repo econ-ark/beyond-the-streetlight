@@ -22,5 +22,13 @@ obs_df = pd.DataFrame({"Unemployment": unemp.data,
 })
 
 print(obs_df.head)
+
+decimal = False  # Set to the desired number of decimal places or False to disable formatting
+
+if decimal is not False:
+    for column in obs_df.columns[1:]:
+        obs_df[column] = obs_df[column].apply(lambda x: f"{x:.{decimal}f}")
+
 obs_df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/FRED.csv')
+
 # obs_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/FRED_scraped.xlsx', index=False)

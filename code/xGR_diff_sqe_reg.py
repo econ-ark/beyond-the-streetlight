@@ -17,6 +17,12 @@ data = errors.iloc[sample_size:, [1] + list(range(-6, 0))]
 # Create a constant term for the regression
 data['Constant'] = 1
 
+# Extract year and quarter as separate variables
+data['Year'] = data['date'].dt.year
+# Demean the year column
+year_avg = data['Year'].mean()
+data['Year_d'] = data['Year'] - year_avg
+
 # List of squared error column names to perform regressions on
 diff_sqe_cols = ["diff_error_unemp","diff_error_cons"]
 
@@ -37,7 +43,7 @@ summary_text = ""
 
 # Loop through the squared error columns
 for i, diff_sqe_col in enumerate(diff_sqe_cols):
-    model = sm.OLS(data[diff_sqe_col], data[['Constant', 'Year']])
+    model = sm.OLS(data[diff_sqe_col], data[['Constant', 'Year_d']])
     results = model.fit(cov_type="HC3")
 
     print(f"Regression Summary for {diff_sqe_col}:")
@@ -61,16 +67,21 @@ for i, diff_sqe_col in enumerate(diff_sqe_cols):
     summary_text += f"Durbin-Watson Statistic for {diff_sqe_col}: {durbin_watson_statistic}\n"
 
     # Predict values based on the regression model
-    predicted_values = results.predict(data[['Constant', 'Year']])
+    predicted_values = results.predict(data[['Constant', 'Year_d']])
 
     # Plot the predicted values with time on the x-axis in the corresponding subplot
     ax = axes[i]
-    ax.plot(data['Year'], predicted_values, label=f'Predicted {diff_sqe_col}')
-    ax.plot(data['Year'], data[diff_sqe_col], label=f'Actual {diff_sqe_col}', linestyle='--', color="black")
+    ax.plot(data['Year'], predicted_values, label=f'Predicted {diff_sqe_col}', color="red")
+    ax.bar(data['Year'], data[diff_sqe_col], label=f'Actual {diff_sqe_col}', color="black", alpha=0.7)
     ax.set_xlabel("Year")
     ax.set_ylabel("Values")
     ax.set_title(f"{diff_sqe_col} Over Time")
     ax.legend()
+
+    min_y = data[diff_sqe_cols].min().min()
+    max_y = data[diff_sqe_cols].max().max()
+    for ax in axes.flat:
+        ax.set_ylim(min_y, max_y)
 
 # Save all regression summaries to a single text file
 summary_file_path = os.path.join(output_dir, f"xGR_diff_sqe_reg_{1983+ss_q}.txt")

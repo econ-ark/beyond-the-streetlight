@@ -74,6 +74,12 @@ GB_df.reset_index(drop=True, inplace=True)
 # Continue working with the 'odd_rows_df' DataFrame
 print(GB_df)
 
+decimal = False # Set to the desired number of decimal places or False to disable formatting
+
+if decimal is not False:
+    for column in GB_df.columns[1:]:
+        GB_df[column] = GB_df[column].apply(lambda x: f"{x:.{decimal}f}")
+
 # Uncomment these final lines to get the output of your choice
 GB_df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/GB.csv')
 # GB_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/GB_parsed.xlsx', index=False)
