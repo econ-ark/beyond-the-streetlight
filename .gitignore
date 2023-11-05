@@ -625,3 +625,6 @@ private
 
 # emacs .el files
 *.el
+
+# Don't export locks
+~lock
