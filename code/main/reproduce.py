@@ -8,12 +8,12 @@ print("Current Directory:", current_directory)
 
 # List all files in the current directory
 files_to_run = [
-    "./code/parse_GB_raw_data.py",
-    "./code/parse_SPF_raw_data.py",
-    "./code/scrape_FRED_data.py",
-    "./code/annual_forecasts.py",
-    "./code/compute_abs_error.py",
-    "./code/abse_reg.py"
+    "./code/main/parse_GB_raw_data.py",
+    "./code/main/parse_SPF_raw_data.py",
+    "./code/main/scrape_FRED_data.py",
+    "./code/main/annual_forecasts.py",
+    "./code/main/compute_abs_error.py",
+    "./code/main/abse_reg.py"
 ]
 
 # Measure the start time

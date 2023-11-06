@@ -150,7 +150,10 @@ with open(summary_file_path, 'w') as summary_file:
 
 # Ensure proper spacing between subplots
 plt.tight_layout()
+plt.show()
 
+
+# Degenerate code. Easier to save them yourself once the graphs pop up. For now.
 # Save both figures
 #if sample_size == 0:
 #    save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1983.png" 
@@ -165,5 +168,4 @@ plt.tight_layout()
 #plt.savefig(save_path2, format='png', bbox_inches='tight')
 #plt.savefig(save_path3, format='png', bbox_inches='tight')
 
-# Show both figures
-plt.show()
+
