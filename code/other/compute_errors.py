@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-forecast = pd.read_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/forecast.csv')
+forecast = pd.read_csv('data/output/forecast.csv')
 
 #Remove the first column capturing indexing
 forecast = forecast.iloc[:, 1:]
@@ -28,5 +28,5 @@ errors_df = pd.DataFrame({'date': quarterly_dates,
                        'diff_error_cons': diff_sqe_cons})
 
 print(errors_df)
-errors_df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/errors.csv')
-# errors_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/errors.xlsx', index=False)
+errors_df.to_csv('data/output/errors.csv')
+# errors_df.to_excel('data/output/errors.xlsx', index=False)

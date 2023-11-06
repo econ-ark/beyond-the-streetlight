@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-GB = pd.read_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/GB.csv')
+GB = pd.read_csv('data/output/GB.csv')
 
 #Remove the first two columns of GB and SPF that capture dates and indexing
 GB = GB.iloc[:, 2:]
@@ -18,7 +18,7 @@ annual_forecast_df['GB_unemp'] = GB_unemp.iloc[:, 1] - GB_unemp.iloc[:, 0]
 annual_forecast_df['GB_cons'] = GB_cons.mean(axis=1)
 
 # Next for SPF
-SPF = pd.read_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/SPF.csv')
+SPF = pd.read_csv('data/output/SPF.csv')
 SPF = SPF.iloc[:, 2:]
 SPF_unemp = SPF.iloc[:, :2]
 SPF_cons = SPF.iloc[:, -4:]
@@ -26,7 +26,7 @@ annual_forecast_df['SPF_unemp'] = SPF_unemp.iloc[:, 1] - SPF_unemp.iloc[:, 0]
 annual_forecast_df['SPF_cons'] = SPF_cons.mean(axis=1)
 
 # Last for the actual FRED changes across years
-FRED = pd.read_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/FRED.csv')
+FRED = pd.read_csv('data/output/FRED.csv')
 FRED = FRED.iloc[1:,:]
 FRED.reset_index(drop=True, inplace=True)
 
@@ -47,8 +47,8 @@ if decimal is not False:
     for column in annual_forecast_df.columns[1:]:
         annual_forecast_df[column] = annual_forecast_df[column].apply(lambda x: f"{x:.{decimal}f}")
 
-annual_forecast_df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/forecast.csv')
-# annual_forecast_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/forecast.xlsx', index=False)
+annual_forecast_df.to_csv('data/output/forecast.csv')
+# annual_forecast_df.to_excel('data/output/forecast.xlsx', index=False)
 
 
 

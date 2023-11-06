@@ -30,7 +30,7 @@ def graph(df, x_column, y_columns, title):
     #plt.show()
 
 # Now retrieve the dataframe to produce graphs
-forecast = pd.read_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/forecast.csv')
+forecast = pd.read_csv('data/output/forecast.csv')
 
 # Convert the "date" column to datetime if not already in datetime format
 forecast['date'] = pd.to_datetime(forecast['date'])
@@ -43,7 +43,7 @@ x_column = "date"
 y_columns = ["FRED_unemp", "GB_unemp", "SPF_unemp"]
 
 graph(forecast, x_column, y_columns, "Unemployment forecasts vs data")
-save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/unemp_forecast.png" 
+save_path = "figures/unemp_forecast.png" 
 plt.savefig(save_path, format='png')
 plt.show()
 
@@ -52,6 +52,6 @@ x_column = "date"
 y_columns = ["FRED_cons", "GB_cons", "SPF_cons"]
 
 graph(forecast, x_column, y_columns, "Real consumption growth forecasts vs data")
-save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/cons_forecast.png" 
+save_path = "figures/cons_forecast.png" 
 plt.savefig(save_path, format='png')
 plt.show()

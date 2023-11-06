@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-forecast = pd.read_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/forecast.csv')
+forecast = pd.read_csv('data/output/forecast.csv')
 
 #Remove the first column capturing indexing
 forecast = forecast.iloc[:, 1:]
@@ -27,8 +27,8 @@ abs_errors_df = pd.DataFrame({'date': quarterly_dates,
                        'diff_error_unemp': diff_abse_unemp,
                        'diff_error_cons': diff_abse_cons})
 
-abs_errors_df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/abs_errors.csv')
-# abs_errors_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/abs_errors.xlsx', index=False)
+abs_errors_df.to_csv('data/output/abs_errors.csv')
+# abs_errors_df.to_excel('data/output/abs_errors.xlsx', index=False)
 
 # Storing the mean of the absolute value of the errors for both GB and SPF
 print(abs_errors_df)

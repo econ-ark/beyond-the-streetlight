@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the Excel file with levels first
-excel_file = pd.ExcelFile('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/raw/meanLevel.xlsx') 
+excel_file = pd.ExcelFile('data/raw/meanLevel.xlsx') 
 
 # Extract unemployment; starting from 2007 Q1 so that there are forecasts for every variable
 df = excel_file.parse('UNEMP')
@@ -10,7 +10,7 @@ unemp_f0 = df['UNEMP2'][53:197]
 unemp_f4 = df['UNEMP6'][53:197]    
  
 # Lastly, load the Excel file with growth in level and extract data for real expenditures
-excel_file = pd.ExcelFile('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/raw/meanGrowth.xlsx') 
+excel_file = pd.ExcelFile('data/raw/meanGrowth.xlsx') 
 df = excel_file.parse('RCONSUM')
 cons_f0 = df['drconsum2'][53:197]  
 cons_f1 = df['drconsum3'][53:197]
@@ -69,5 +69,5 @@ if decimal is not False:
         results_df[column] = results_df[column].apply(lambda x: f"{x:.{decimal}f}")
 
 # Uncomment these final lines to get the output of your choice
-results_df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/SPF.csv')
-# SPF_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/SPF_parsed.xlsx', index=False)
+results_df.to_csv('data/output/SPF.csv')
+# SPF_df.to_excel('data/output/SPF_parsed.xlsx', index=False)

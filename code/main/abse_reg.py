@@ -6,7 +6,7 @@ import os
 import numpy as np
 from matplotlib.font_manager import FontProperties
 
-abs_errors = pd.read_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/abs_errors.csv')
+abs_errors = pd.read_csv('data/output/abs_errors.csv')
 
 # Convert the "date" column to datetime if not already in datetime format
 abs_errors['date'] = pd.to_datetime(abs_errors['date'])
@@ -67,7 +67,7 @@ for i, j in zip(range(3), [0, 0, 0]):
 table_SPF.scale(.5, .750)
 
 # Directory and filename for saving regression summaries
-output_dir = '/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/results'
+output_dir = 'results'
 summary_text = ""
 
 # Loop through the squared error columns
@@ -156,13 +156,13 @@ plt.show()
 # Degenerate code. Easier to save them yourself once the graphs pop up. For now.
 # Save both figures
 #if sample_size == 0:
-#    save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1983.png" 
-#    save_path2 = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1983_GB_cons_only.png"
-#    save_path3 = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1983_SPF_cons_only.png"
+#    save_path = "figures/abse_reg_1983.png" 
+#    save_path2 = "figures/abse_reg_1983_GB_cons_only.png"
+#    save_path3 = "figures/abse_reg_1983_SPF_cons_only.png"
 #else:
-#    save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1995.png"
-#    save_path2 = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1995_GB_cons_only.png"
-#    save_path3 = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/abse_reg_1995_SPF_cons_only.png"
+#    save_path = "figures/abse_reg_1995.png"
+#    save_path2 = "figures/abse_reg_1995_GB_cons_only.png"
+#    save_path3 = "figures/abse_reg_1995_SPF_cons_only.png"
 
 #plt.savefig(save_path, format='png')
 #plt.savefig(save_path2, format='png', bbox_inches='tight')

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from statsmodels.stats.stattools import durbin_watson
 import os
 
-errors = pd.read_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/errors.csv')
+errors = pd.read_csv('data/output/errors.csv')
 
 # Convert the "date" column to datetime if not already in datetime format
 errors['date'] = pd.to_datetime(errors['date'])
@@ -28,7 +28,7 @@ data['Year_d'] = data['Year'] - year_avg
 
 # Create a 1x2 grid of plots
 fig, axes = plt.subplots(1, 2, figsize=(12, 4))
-output_dir = '/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/results'
+output_dir = 'results'
 summary_text = ""
 
 # Loop through the squared error columns
@@ -81,9 +81,9 @@ with open(summary_file_path, 'w') as summary_file:
 # Ensure proper spacing between subplots
 plt.tight_layout()
 if ss_q == 0:
-    save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/diff_sqe_reg_1983.png" 
+    save_path = "figures/diff_sqe_reg_1983.png" 
 else:
-    save_path = "/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/figures/diff_sqe_reg_1995.png"
+    save_path = "figures/diff_sqe_reg_1995.png"
 plt.savefig(save_path, format='png')
 plt.show()
 
