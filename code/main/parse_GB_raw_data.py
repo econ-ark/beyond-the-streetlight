@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load the Excel file
-excel_file = pd.ExcelFile('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/raw/GBweb_Row_Format.xlsx') 
+excel_file = pd.ExcelFile('data/raw/GBweb_Row_Format.xlsx') 
 
 # First for unemployment; note, we want from 1981, Q1 onward to align with SPF data
 df = excel_file.parse('UNEMP')
@@ -81,5 +81,5 @@ if decimal is not False:
         GB_df[column] = GB_df[column].apply(lambda x: f"{x:.{decimal}f}")
 
 # Uncomment these final lines to get the output of your choice
-GB_df.to_csv('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/GB.csv')
-# GB_df.to_excel('/Users/dc/Library/CloudStorage/OneDrive-JohnsHopkins/research/GitHub/dedwar65/RS100_Discussion/data/output/GB_parsed.xlsx', index=False)
+GB_df.to_csv('data/output/GB.csv')
+# GB_df.to_excel('data/output/GB_parsed.xlsx', index=False)
