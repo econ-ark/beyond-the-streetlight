@@ -119,7 +119,7 @@ for i, abse_col in enumerate(abse_cols):
 
     # If it's the last row, plot in the first separate figure (fig2)
     if i == 2:
-        ax2.plot(data['Year'], predicted_values, color="red")
+        ax2.plot(data['Year'], predicted_values, color="red", linewidth=3.0)
         ax2.bar(data['Year'], data[abse_col], color="black", alpha=0.7)
         ax2.set_xlabel("Year")
         ax2.set_ylabel("Values")
@@ -127,7 +127,7 @@ for i, abse_col in enumerate(abse_cols):
 
     # If it's the last row, plot in the second separate figure (fig3)
     elif i == 3:
-        ax3.plot(data['Year'], predicted_values, color="red")
+        ax3.plot(data['Year'], predicted_values, color="red",linewidth=3.0)
         ax3.bar(data['Year'], data[abse_col], color="black", alpha=0.7)
         ax3.set_xlabel("Year")
         ax3.set_ylabel("Values")

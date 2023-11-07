@@ -4,8 +4,8 @@ Regression Summary for GB_error_unemp:
 Dep. Variable:         GB_error_unemp   R-squared:                       0.013
 Model:                            OLS   Adj. R-squared:                  0.006
 Method:                 Least Squares   F-statistic:                     1.760
-Date:                Mon, 06 Nov 2023   Prob (F-statistic):              0.187
-Time:                        07:17:50   Log-Likelihood:                -118.32
+Date:                Tue, 07 Nov 2023   Prob (F-statistic):              0.187
+Time:                        09:53:44   Log-Likelihood:                -118.32
 No. Observations:                 144   AIC:                             240.6
 Df Residuals:                     142   BIC:                             246.6
 Df Model:                           1                                         
@@ -32,8 +32,8 @@ Regression Summary for SPF_error_unemp:
 Dep. Variable:        SPF_error_unemp   R-squared:                       0.005
 Model:                            OLS   Adj. R-squared:                 -0.002
 Method:                 Least Squares   F-statistic:                    0.6700
-Date:                Mon, 06 Nov 2023   Prob (F-statistic):              0.414
-Time:                        07:17:50   Log-Likelihood:                -125.71
+Date:                Tue, 07 Nov 2023   Prob (F-statistic):              0.414
+Time:                        09:53:44   Log-Likelihood:                -125.71
 No. Observations:                 144   AIC:                             255.4
 Df Residuals:                     142   BIC:                             261.4
 Df Model:                           1                                         
@@ -60,8 +60,8 @@ Regression Summary for GB_error_cons:
 Dep. Variable:          GB_error_cons   R-squared:                       0.219
 Model:                            OLS   Adj. R-squared:                  0.214
 Method:                 Least Squares   F-statistic:                     30.02
-Date:                Mon, 06 Nov 2023   Prob (F-statistic):           1.89e-07
-Time:                        07:17:50   Log-Likelihood:                -166.53
+Date:                Tue, 07 Nov 2023   Prob (F-statistic):           1.89e-07
+Time:                        09:53:44   Log-Likelihood:                -166.53
 No. Observations:                 144   AIC:                             337.1
 Df Residuals:                     142   BIC:                             343.0
 Df Model:                           1                                         
@@ -88,8 +88,8 @@ Regression Summary for SPF_error_cons:
 Dep. Variable:         SPF_error_cons   R-squared:                       0.133
 Model:                            OLS   Adj. R-squared:                  0.127
 Method:                 Least Squares   F-statistic:                     26.15
-Date:                Mon, 06 Nov 2023   Prob (F-statistic):           1.01e-06
-Time:                        07:17:50   Log-Likelihood:                -177.99
+Date:                Tue, 07 Nov 2023   Prob (F-statistic):           1.01e-06
+Time:                        09:53:44   Log-Likelihood:                -177.99
 No. Observations:                 144   AIC:                             360.0
 Df Residuals:                     142   BIC:                             365.9
 Df Model:                           1                                         
