@@ -3,6 +3,9 @@
 
 #!! ERROR:  is undefined. Use list command to see defined gitignore types !!#
 
+# Ignore MacOS junk files
+.DS_Store
+
 ### Emacs ###
 # -*- mode: gitignore; -*-
 *~
@@ -385,7 +388,8 @@ TSWLatexianTemp*
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
