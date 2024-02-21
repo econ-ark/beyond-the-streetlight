@@ -4,11 +4,12 @@ SCPT_DIR=$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)
 
 cd "$SCPT_DIR"
 
+mamba env update -f binder/environment.yml
+conda activate rs100_discussion
+
 ipython *.ipynb
 
-cd code/main
-
-python reproduce.py
+python code/main/reproduce.py
 
 
 
