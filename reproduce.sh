@@ -6,9 +6,7 @@ cd "$SCPT_DIR"
 
 ipython *.ipynb
 
-cd code
-
-python reproduce.py
+python code/main/reproduce.py
 
 
 
