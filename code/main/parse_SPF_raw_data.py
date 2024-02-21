@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 # Load the Excel file with levels first
 excel_file = pd.ExcelFile('data/raw/meanLevel.xlsx') 
@@ -68,6 +69,10 @@ if decimal is not False:
     for column in results_df.columns[1:]:
         results_df[column] = results_df[column].apply(lambda x: f"{x:.{decimal}f}")
 
+current_directory = os.path.dirname(os.path.abspath(__file__))
+file_path = "/../data/output/FRED.csv"
+results_df.to_csv(current_directory + file_path)
+
 # Uncomment these final lines to get the output of your choice
-results_df.to_csv('data/output/SPF.csv')
+# results_df.to_csv('data/output/SPF.csv')
 # SPF_df.to_excel('data/output/SPF_parsed.xlsx', index=False)
