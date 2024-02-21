@@ -8,12 +8,12 @@ print("Current Directory:", current_directory)
 
 # List all files in the current directory
 files_to_run = [
-    "/parse_GB_raw_data.py",
-    "/parse_SPF_raw_data.py",
-    "/scrape_FRED_data.py",
-    "/annual_forecasts.py",
-    "/compute_abs_error.py",
-    "/abse_reg.py"
+    "./code/main/parse_GB_raw_data.py",
+    "./code/main/parse_SPF_raw_data.py",
+    "./code/main/scrape_FRED_data.py",
+    "./code/main/annual_forecasts.py",
+    "./code/main/compute_abs_error.py",
+    "./code/main/abse_reg.py"
 ]
 
 # Measure the start time
@@ -22,7 +22,7 @@ start_time = time.time()
 # Run each Python script in the directory
 for python_file in files_to_run:
     if python_file != "reproduce.py":  # Exclude the launcher script itself
-        subprocess.run(["python", current_directory + python_file])
+        subprocess.run(["python", python_file])
 
 end_time = time.time()
 

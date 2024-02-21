@@ -1,5 +1,4 @@
 import pandas as pd
-import os
 
 # Load the Excel file
 excel_file = pd.ExcelFile('data/raw/GBweb_Row_Format.xlsx') 
@@ -81,10 +80,6 @@ if decimal is not False:
     for column in GB_df.columns[1:]:
         GB_df[column] = GB_df[column].apply(lambda x: f"{x:.{decimal}f}")
 
-current_directory = os.path.dirname(os.path.abspath(__file__))
-file_path = "/../data/output/FRED.csv"
-GB_df.to_csv(current_directory + file_path)
-
 # Uncomment these final lines to get the output of your choice
-#GB_df.to_csv('data/output/GB.csv')
+GB_df.to_csv('data/output/GB.csv')
 # GB_df.to_excel('data/output/GB_parsed.xlsx', index=False)
