@@ -4,6 +4,7 @@ channels:
 dependencies:
   - python=3.9
   - ipywidgets
+  - jupyter
   - jupyterlab
   - matplotlib
   - numpy
@@ -13,8 +14,8 @@ dependencies:
   - lxml
   - requests
   - statsmodels
+  - pip
   - pip:
-    - pandas-datareader
-    - fredpy
-    - statsmodels
-
+      - pandas-datareader
+      - fredpy
+      - statsmodels

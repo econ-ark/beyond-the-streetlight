@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 import fredpy as fp
 import matplotlib.pyplot as plt
-import os
 
 fp.api_key = "c735c085b4e162a17326871bc1d5c625"
 win = ['01-01-1982','12-01-2017']
@@ -30,10 +29,6 @@ if decimal is not False:
     for column in obs_df.columns[1:]:
         obs_df[column] = obs_df[column].apply(lambda x: f"{x:.{decimal}f}")
 
-current_directory = os.path.dirname(os.path.abspath(__file__))
-file_path = "/../data/output/FRED.csv"
-obs_df.to_csv(current_directory + file_path)
-
-#obs_df.to_csv('data/output/FRED.csv')
+obs_df.to_csv('data/output/FRED.csv')
 
 # obs_df.to_excel('data/output/FRED_scraped.xlsx', index=False)
