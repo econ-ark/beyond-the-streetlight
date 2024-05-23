@@ -3,19 +3,14 @@ channels:
   - conda-forge
 dependencies:
   - python=3.9
-  - ipywidgets
-  - jupyter
-  - jupyterlab
-  - matplotlib
-  - numpy
-  - pandas
-  - openpyxl
-  - fredapi
-  - lxml
-  - requests
-  - statsmodels
+  - jupyterlab=4.0.8
+  - matplotlib=3.8.1
+  - numpy=1.26.0
+  - pandas=2.1.3
+  - openpyxl=3.1.2
+  - fredapi=0.4.2
+  - statsmodels=0.14.0
   - pip
   - pip:
-      - pandas-datareader
-      - fredpy
-      - statsmodels
+    - pandas-datareader==0.10.0
+    - fredpy==3.2.8
