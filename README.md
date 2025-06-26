@@ -8,9 +8,18 @@ The subfolder "code/main" performs the "main" tasks of this exercise using the c
 
 ## Quick Start
 
-### Option 1: Using Docker (Recommended - Fully Isolated Environment)
+### Option 1: Using VS Code/Cursor Dev Container (Easiest for Development)
 
-The easiest way to run the analysis is using Docker, which provides a completely reproducible environment:
+If you use VS Code or Cursor with the **"Dev Containers"** extension:
+
+1. Open this repository in VS Code/Cursor
+2. When prompted, click **"Reopen in Container"**
+3. The development environment will build automatically
+4. Run `./reproduce.sh` once the container is ready
+
+This provides the best development experience with full IDE integration.
+
+### Option 2: Using Docker (Recommended - Command Line)
 
 ```bash
 # Build and run the full reproduction
@@ -30,7 +39,7 @@ The easiest way to run the analysis is using Docker, which provides a completely
 - [Docker](https://www.docker.com/get-started) installed and running
 - [Docker Compose](https://docs.docker.com/compose/install/) (usually included with Docker)
 
-### Option 2: Using Poetry (For Development)
+### Option 3: Using Poetry (For Local Development)
 
 ### Prerequisites
 
