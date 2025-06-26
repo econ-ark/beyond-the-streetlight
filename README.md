@@ -8,6 +8,30 @@ The subfolder "code/main" performs the "main" tasks of this exercise using the c
 
 ## Quick Start
 
+### Option 1: Using Docker (Recommended - Fully Isolated Environment)
+
+The easiest way to run the analysis is using Docker, which provides a completely reproducible environment:
+
+```bash
+# Build and run the full reproduction
+./docker-run.sh reproduce
+
+# Or run just the analysis (faster)
+./docker-run.sh analysis
+
+# For interactive development with Jupyter Lab
+./docker-run.sh jupyter  # Access at http://localhost:8888
+
+# For an interactive shell
+./docker-run.sh shell
+```
+
+**Prerequisites for Docker:**
+- [Docker](https://www.docker.com/get-started) installed and running
+- [Docker Compose](https://docs.docker.com/compose/install/) (usually included with Docker)
+
+### Option 2: Using Poetry (For Development)
+
 ### Prerequisites
 
 - Python 3.9 or higher
@@ -69,3 +93,55 @@ All dependencies are managed through Poetry and specified in `pyproject.toml`. K
 - statsmodels for statistical analysis
 - fredapi and fredpy for Federal Reserve Economic Data access
 - jupyterlab for notebook execution
+
+## Docker Usage
+
+### Docker Commands
+
+The repository includes Docker support for maximum reproducibility and ease of use:
+
+```bash
+# View available Docker commands
+./docker-run.sh help
+
+# Build the Docker image
+./docker-run.sh build
+
+# Run the complete reproduction workflow
+./docker-run.sh reproduce
+
+# Run only the analysis (faster, skips some setup)
+./docker-run.sh analysis
+
+# Start Jupyter Lab for interactive analysis
+./docker-run.sh jupyter
+
+# Open an interactive shell in the container
+./docker-run.sh shell
+
+# Clean up Docker images and containers
+./docker-run.sh clean
+```
+
+### Direct Docker Commands
+
+You can also use Docker directly:
+
+```bash
+# Build the image
+docker build -t beyond-the-streetlight .
+
+# Run the reproduction
+docker run --rm -v $(pwd)/results:/app/results -v $(pwd)/figures:/app/figures beyond-the-streetlight
+
+# Run with Docker Compose
+docker-compose run --rm reproduce
+```
+
+### Docker Benefits
+
+- **Complete Isolation**: No conflicts with your local Python environment
+- **Reproducibility**: Identical environment across all machines
+- **Easy Setup**: No need to install Python, Poetry, or dependencies locally
+- **Cross-Platform**: Works on Windows, macOS, and Linux
+- **Version Control**: Docker image captures the exact software environment

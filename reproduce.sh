@@ -26,7 +26,7 @@ fi
 echo "Running reproduction workflow..."
 
 # Execute the analysis workflow
-./run_analysis.sh
+poetry run ./run_analysis.sh
 
 echo "Reproduction workflow completed!"
 

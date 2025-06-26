@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  # Main reproduction service
+  reproduce:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: beyond-the-streetlight:latest
+    container_name: beyond-the-streetlight-reproduce
+    volumes:
+      # Mount output directories to preserve results
+      - ./results:/app/results
+      - ./figures:/app/figures
+      - ./data/output:/app/data/output
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: poetry run ./reproduce.sh
+
+  # Analysis-only service (faster for testing)
+  analysis:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: beyond-the-streetlight:latest
+    container_name: beyond-the-streetlight-analysis
+    volumes:
+      - ./results:/app/results
+      - ./figures:/app/figures
+      - ./data/output:/app/data/output
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: poetry run ./run_analysis.sh
+
+  # Development service with Jupyter Lab
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: beyond-the-streetlight:latest
+    container_name: beyond-the-streetlight-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      # Mount entire directory for development
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: poetry run jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password=''
+
+  # Interactive shell service
+  shell:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: beyond-the-streetlight:latest
+    container_name: beyond-the-streetlight-shell
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
+    command: /bin/bash 

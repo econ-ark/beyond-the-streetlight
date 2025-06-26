@@ -37,15 +37,18 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y git curl
         
-    - name: Clone REMARK validation tools
+    - name: Setup REMARK validation tools
       run: |
-        git clone https://github.com/econ-ark/REMARK.git ../REMARK
-        cd ../REMARK
+        export REMARK_TOOLS_DIR="${REMARK_TOOLS_DIR:-$HOME/remark-tools}"
+        git clone https://github.com/econ-ark/REMARK.git "$REMARK_TOOLS_DIR"
+        cd "$REMARK_TOOLS_DIR"
         pip install -r requirements.txt
+        echo "REMARK_TOOLS_DIR=$REMARK_TOOLS_DIR" >> $GITHUB_ENV
         
     - name: Create REMARK catalog entry for validation
       run: |
-        cat > ../REMARK/REMARKs/validation-temp.yml << EOF
+        mkdir -p "$REMARK_TOOLS_DIR/REMARKs"
+        cat > "$REMARK_TOOLS_DIR/REMARKs/validation-temp.yml" << EOF
         name: $(basename $GITHUB_REPOSITORY)
         remote: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY
         version: ${GITHUB_REF#refs/tags/}
@@ -53,12 +56,12 @@ jobs:
         
     - name: Validate REMARK compliance
       run: |
-        cd ../REMARK
+        cd "$REMARK_TOOLS_DIR"
         python cli.py lint REMARKs/validation-temp.yml
         
     - name: Test repository build
       run: |
-        cd ../REMARK
+        cd "$REMARK_TOOLS_DIR"
         python cli.py build REMARKs/validation-temp.yml
         
     - name: Test quick reproduction (if available)
