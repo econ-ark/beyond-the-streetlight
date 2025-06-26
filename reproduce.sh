@@ -25,11 +25,8 @@ fi
 
 echo "Running reproduction workflow..."
 
-# Run the Jupyter notebook
-poetry run ipython *.ipynb
-
-# Run the main reproduction script
-poetry run python code/main/reproduce.py
+# Execute the analysis workflow
+./run_analysis.sh
 
 echo "Reproduction workflow completed!"
 

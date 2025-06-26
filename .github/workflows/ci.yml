@@ -1,0 +1,88 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ main, master, remarkification ]
+  pull_request:
+    branches: [ main, master, remarkification ]
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11"]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
+      with:
+        version: latest
+        virtualenvs-create: true
+        virtualenvs-in-project: true
+        installer-parallel: true
+
+    - name: Load cached venv
+      id: cached-poetry-dependencies
+      uses: actions/cache@v3
+      with:
+        path: .venv
+        key: venv-${{ runner.os }}-${{ matrix.python-version }}-${{ hashFiles('**/poetry.lock') }}
+
+    - name: Install dependencies
+      if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+      run: poetry install --no-interaction --no-root
+
+    - name: Install project
+      run: poetry install --no-interaction
+
+    - name: Run analysis workflow
+      run: ./run_analysis.sh
+
+    - name: Verify output files
+      run: |
+        echo "Checking for expected output files..."
+        test -f data/output/GB.csv || (echo "Missing GB.csv" && exit 1)
+        test -f data/output/SPF.csv || (echo "Missing SPF.csv" && exit 1)
+        test -f data/output/FRED.csv || (echo "Missing FRED.csv" && exit 1)
+        test -f data/output/forecast.csv || (echo "Missing forecast.csv" && exit 1)
+        test -f data/output/errors.csv || (echo "Missing errors.csv" && exit 1)
+        test -f data/output/abs_errors.csv || (echo "Missing abs_errors.csv" && exit 1)
+        echo "All output files verified successfully!"
+
+    - name: Upload analysis results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: analysis-results-python-${{ matrix.python-version }}
+        path: |
+          data/output/
+          results/
+          figures/
+        retention-days: 30
+
+  test-installation:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.9"
+        
+    - name: Test install script
+      run: ./install.sh
+      
+    - name: Test reproduce script 
+      run: ./reproduce.sh 
