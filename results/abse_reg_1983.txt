@@ -4,8 +4,8 @@ Regression Summary for GB_error_unemp:
 Dep. Variable:         GB_error_unemp   R-squared:                       0.013
 Model:                            OLS   Adj. R-squared:                  0.006
 Method:                 Least Squares   F-statistic:                     1.760
-Date:                Wed, 21 Feb 2024   Prob (F-statistic):              0.187
-Time:                        10:04:35   Log-Likelihood:                -118.32
+Date:                Thu, 26 Jun 2025   Prob (F-statistic):              0.187
+Time:                        14:22:47   Log-Likelihood:                -118.32
 No. Observations:                 144   AIC:                             240.6
 Df Residuals:                     142   BIC:                             246.6
 Df Model:                           1                                         
@@ -25,15 +25,15 @@ Kurtosis:                      15.518   Cond. No.                         10.4
 Notes:
 [1] Standard Errors are heteroscedasticity robust (HC3)
 Mean Squared Error for GB_error_unemp: 0.3028
-Durbin-Watson Statistic for GB_error_unemp: 0.4990387828073438
+Durbin-Watson Statistic for GB_error_unemp: 0.499038782807344
 Regression Summary for SPF_error_unemp:
                             OLS Regression Results                            
 ==============================================================================
 Dep. Variable:        SPF_error_unemp   R-squared:                       0.005
 Model:                            OLS   Adj. R-squared:                 -0.002
 Method:                 Least Squares   F-statistic:                    0.6700
-Date:                Wed, 21 Feb 2024   Prob (F-statistic):              0.414
-Time:                        10:04:35   Log-Likelihood:                -125.71
+Date:                Thu, 26 Jun 2025   Prob (F-statistic):              0.414
+Time:                        14:22:47   Log-Likelihood:                -125.71
 No. Observations:                 144   AIC:                             255.4
 Df Residuals:                     142   BIC:                             261.4
 Df Model:                           1                                         
@@ -53,15 +53,15 @@ Kurtosis:                      13.710   Cond. No.                         10.4
 Notes:
 [1] Standard Errors are heteroscedasticity robust (HC3)
 Mean Squared Error for SPF_error_unemp: 0.3356
-Durbin-Watson Statistic for SPF_error_unemp: 0.3803364020787631
+Durbin-Watson Statistic for SPF_error_unemp: 0.380336402078763
 Regression Summary for GB_error_cons:
                             OLS Regression Results                            
 ==============================================================================
 Dep. Variable:          GB_error_cons   R-squared:                       0.219
 Model:                            OLS   Adj. R-squared:                  0.214
 Method:                 Least Squares   F-statistic:                     30.02
-Date:                Wed, 21 Feb 2024   Prob (F-statistic):           1.89e-07
-Time:                        10:04:35   Log-Likelihood:                -166.53
+Date:                Thu, 26 Jun 2025   Prob (F-statistic):           1.89e-07
+Time:                        14:22:47   Log-Likelihood:                -166.53
 No. Observations:                 144   AIC:                             337.1
 Df Residuals:                     142   BIC:                             343.0
 Df Model:                           1                                         
@@ -88,8 +88,8 @@ Regression Summary for SPF_error_cons:
 Dep. Variable:         SPF_error_cons   R-squared:                       0.133
 Model:                            OLS   Adj. R-squared:                  0.127
 Method:                 Least Squares   F-statistic:                     26.15
-Date:                Wed, 21 Feb 2024   Prob (F-statistic):           1.01e-06
-Time:                        10:04:35   Log-Likelihood:                -177.99
+Date:                Thu, 26 Jun 2025   Prob (F-statistic):           1.01e-06
+Time:                        14:22:47   Log-Likelihood:                -177.99
 No. Observations:                 144   AIC:                             360.0
 Df Residuals:                     142   BIC:                             365.9
 Df Model:                           1                                         
