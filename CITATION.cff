@@ -9,7 +9,7 @@ authors:
     orcid: https://orcid.org/0000-0003-3732-9312
 title: Beyond the streetlight
 abstract: This repository provides an analysis of the trend in forecast errors made by the Tealbook/Greenbook(GB) and the Survey of Professional Forecasters(SPF) for measures of the unemployment rate and real growth in personal consumption expenditures from 1982 to 2017.
-version: 1.0.4
+version: 1.0.5
 date-released: 2023-11-06
 references:
   - type: article
