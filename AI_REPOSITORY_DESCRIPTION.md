@@ -157,7 +157,7 @@ beyond-the-streetlight/
 **Authors**: Decory Edwards, Christopher Carroll
 **Institution**: Johns Hopkins University, Econ-ARK
 **Event**: Federal Reserve R&S Centennial Conference (2023)
-**Repository**: <https://github.com/dedwar65/beyond-the-streetlight>
+**Repository**: <https://github.com/econ-ark/beyond-the-streetlight>
 **License**: Apache 2.0
 
 ## Reproducibility Statement

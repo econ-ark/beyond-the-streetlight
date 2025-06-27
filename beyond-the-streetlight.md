@@ -1,6 +1,6 @@
 ---
 # CFF required fields
-cff-version: 1.1.0 # required (don't change)
+cff-version: 1.2.0 # required (don't change)
 message: If you use this software, please cite it as below. # optional
 authors: # required
   - family-names: Edwards
@@ -9,9 +9,9 @@ authors: # required
   - family-names: Carroll
     given-names: Christopher
     orcid: https://orcid.org/0000-0003-3732-9312
-title: Beyond the streetlight # required
+title: Beyond the Streetlight # required
 abstract: This repository provides an analysis of the trend in forecast errors made by the Tealbook/Greenbook(GB) and the Survey of Professional Forecasters(SPF) for measures of the unemployment rate and real growth in personal consumption expenditures from 1982 to 2017. # optional
-version: 1.0.4 # optional Version of the software released
+version: 1.0.5 # optional Version of the software released
 date-released: 2023-11-06 # required
 
 # REMARK required fields
@@ -25,16 +25,16 @@ references: # required for replications; optional for reproductions; BibTex data
       - family-names: "Kennickell"
         given-names: "Arthur"
         #orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
-    title: "100 years of Economic Measurement in the Division of Research & Statistics: Beyond the streetlight" # required
+    title: "100 years of Economic Measurement in the Division of Research & Statistics: Beyond the Streetlight" # required
     #doi: "Original paper DOI" # optional
     date: 2023-10-24 # required
     publisher: "R&S Centennial Conference"
 #repository: "URL of repository" # optional (when original paper has own repository)
 
 # Econ-ARK website fields 
-github_repo_url: https://github.com/dedwar65/beyond-the-streetlight # required 
+github_repo_url: https://github.com/econ-ark/beyond-the-streetlight # required 
 remark-name: beyond-the-streetlight # required
-title-original-paper: "100 years of Economic Measurement in the Division of Research & Statistics: Beyond the streetlight" # optional 
+title-original-paper: "100 years of Economic Measurement in the Division of Research & Statistics: Beyond the Streetlight" # optional 
 notebooks:  # path to any notebooks within the repo - optional
   - RS100_Discussion_Slides.ipynb
 
@@ -51,4 +51,4 @@ keywords: # optional
 
 # Abstract
 
-This repository provides an analysis of the trend in forecast errors made by the Tealbook/Greenbook(GB) and the Survey of Professional Forecasters(SPF) for measures of the unemployment rate and real growth in personal consumption expenditures from 1982 to 2017. The data on forecasts for unemployment and consumption made by the federal reserve (Tealbook/Greenbook) and the mean across private forcasters are provided by the Philidelphia Fed. Data on realized values of the forecasted variables are provided by the St. Louis Fed. 
+This repository provides an analysis of the trend in forecast errors made by the Tealbook/Greenbook(GB) and the Survey of Professional Forecasters(SPF) for measures of the unemployment rate and real growth in personal consumption expenditures from 1982 to 2017. The data on forecasts for unemployment and consumption made by the Federal Reserve (Tealbook/Greenbook) and the mean across private forecasters are provided by the Philadelphia Fed. Data on realized values of the forecasted variables are provided by the St. Louis Fed. 

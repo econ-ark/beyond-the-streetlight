@@ -6,7 +6,7 @@ FROM python:3.9-slim
 # Set metadata
 LABEL maintainer="Econ-ARK Team"
 LABEL description="Beyond the Streetlight: Economic Forecasting Analysis"
-LABEL version="1.0.0"
+LABEL version="1.0.5"
 
 # Set working directory
 WORKDIR /app

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "beyond-the-streetlight"
-version = "1.0.0"
+version = "1.0.5"
 description = "Replication materials for 'Beyond the Streetlight' economic forecasting analysis"
 authors = ["Econ-ARK Team"]
 readme = "README.md"

@@ -1,7 +1,7 @@
 ---
 # Econ-ARK website fields
 remark-name: beyond-the-streetlight
-title-original-paper: "100 years of Economic Measurement in the Division of Research & Statistics: Beyond the streetlight"
+title-original-paper: "100 years of Economic Measurement in the Division of Research & Statistics: Beyond the Streetlight"
 notebooks:
   - RS100_Discussion_Slides.ipynb
 ---
