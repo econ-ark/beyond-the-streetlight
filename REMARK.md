@@ -8,70 +8,77 @@ notebooks:
 
 # Abstract
 
-This repository provides an analysis of the trend in forecast errors made by the Tealbook/Greenbook(GB) and the Survey of Professional Forecasters(SPF) for measures of the unemployment rate and real growth in personal consumption expenditures from 1982 to 2017. The data on forecasts for unemployment and consumption made by the federal reserve (Tealbook/Greenbook) and the mean across private forcasters are provided by the Philidelphia Fed. Data on realized values of the forecasted variables are provided by the St. Louis Fed. 
+This repository provides an analysis of the trend in forecast errors made by the Tealbook/Greenbook(GB) and the Survey of Professional Forecasters(SPF) for measures of the unemployment rate and real growth in personal consumption expenditures from 1982 to 2017. The data on forecasts for unemployment and consumption made by the Federal Reserve (Tealbook/Greenbook) and the mean across private forecasters are provided by the Philadelphia Fed. Data on realized values of the forecasted variables are provided by the St. Louis Fed.
 
 ---
-# Website-specific metadata for enhanced display and discoverability
+
+## Website-specific metadata for enhanced display and discoverability
+
 learning_objectives:
-  - "Understand the limitations of traditional data sources in economic research"
-  - "Explore how Google Books data can supplement conventional economic indicators"
-  - "Apply web scraping and text analysis techniques to economic research"
-  - "Assess the validity of alternative data sources through replication studies"
-  - "Compare forecast accuracy between traditional and unconventional data approaches"
+
+- "Understand the limitations of traditional data sources in economic research"
+- "Explore how Google Books data can supplement conventional economic indicators"
+- "Apply web scraping and text analysis techniques to economic research"
+- "Assess the validity of alternative data sources through replication studies"
+- "Compare forecast accuracy between traditional and unconventional data approaches"
 
 prerequisites:
-  - "Intermediate knowledge of macroeconomics and economic indicators"
-  - "Basic Python programming skills"
-  - "Familiarity with data manipulation (pandas) and visualization (matplotlib)"
-  - "Understanding of statistical concepts and forecast evaluation"
-  - "Knowledge of web APIs and data scraping concepts"
+
+- "Intermediate knowledge of macroeconomics and economic indicators"
+- "Basic Python programming skills"
+- "Familiarity with data manipulation (pandas) and visualization (matplotlib)"
+- "Understanding of statistical concepts and forecast evaluation"
+- "Knowledge of web APIs and data scraping concepts"
 
 jupyter_notebooks:
-  - path: "RS100_Discussion_Slides.ipynb"
+
+- path: "RS100_Discussion_Slides.ipynb"
     description: "Main presentation slides and interactive analysis"
     type: "presentation"
     estimated_runtime: "10-15 minutes"
 
 related_materials:
-  - "data-analysis-techniques"
-  - "economic-forecasting"
-  - "web-scraping-methods"
-  - "alternative-data-sources"
+
+- "data-analysis-techniques"
+- "economic-forecasting"
+- "web-scraping-methods"
+- "alternative-data-sources"
 
 methodology_tags:
-  - "alternative data"
-  - "web scraping"
-  - "forecast evaluation"
-  - "text analysis"
-  - "economic indicators"
-  - "google books ngram"
-  - "replication study"
+
+- "alternative data"
+- "web scraping"
+- "forecast evaluation"
+- "text analysis"
+- "economic indicators"
+- "google books ngram"
+- "replication study"
 
 difficulty_level: "intermediate"
 
 estimated_completion_time: "2-3 hours for full analysis"
 
 research_context: |
-  This project demonstrates the exploration of unconventional data sources for economic research, 
-  specifically using Google Books Ngram data to track economic concepts over time. It serves as 
-  both a methodological contribution and a replication study, showing how alternative data can 
+  This project demonstrates the exploration of unconventional data sources for economic research,
+  specifically using Google Books Ngram data to track economic concepts over time. It serves as
+  both a methodological contribution and a replication study, showing how alternative data can
   complement traditional economic indicators.
 
 educational_value: |
-  Students and researchers will learn how to think creatively about data sources, implement 
-  web scraping techniques for research, and critically evaluate the validity of alternative 
+  Students and researchers will learn how to think creatively about data sources, implement
+  web scraping techniques for research, and critically evaluate the validity of alternative
   data through rigorous comparison with established sources.
 
 policy_relevance: |
-  The methods demonstrated here are relevant for real-time economic monitoring, early warning 
-  systems, and situations where traditional data may be delayed or unavailable. This is 
+  The methods demonstrated here are relevant for real-time economic monitoring, early warning
+  systems, and situations where traditional data may be delayed or unavailable. This is
   particularly valuable for emerging economies or during crisis periods.
 
 computational_requirements:
   python_version: "3.8+"
   key_packages:
     - "pandas"
-    - "matplotlib" 
+    - "matplotlib"
     - "requests"
     - "beautifulsoup4"
     - "numpy"
@@ -82,49 +89,52 @@ computational_requirements:
     quick_demonstration: "5-10 minutes"
 
 data_sources:
-  - name: "Google Books Ngram Viewer"
+
+- name: "Google Books Ngram Viewer"
     description: "Historical frequency of words/phrases in books"
-    url: "https://books.google.com/ngrams"
+    url: "<https://books.google.com/ngrams>"
     access_method: "Web scraping"
-    
-  - name: "Federal Reserve Economic Data (FRED)"
+
+- name: "Federal Reserve Economic Data (FRED)"
     description: "Official economic time series data"
-    url: "https://fred.stlouisfed.org/"
+    url: "<https://fred.stlouisfed.org/>"
     access_method: "API"
-    
-  - name: "Survey of Professional Forecasters"
+
+- name: "Survey of Professional Forecasters"
     description: "Professional economic forecasts"
-    url: "https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/survey-of-professional-forecasters"
+    url: "<https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/survey-of-professional-forecasters>"
     access_method: "Direct download"
 
 reproducibility_notes: |
   This project demonstrates best practices for reproducible research with web-scraped data:
-  - All data sources are documented with URLs and access dates
-  - Web scraping code includes error handling and rate limiting
-  - Results are compared against multiple validation sources
-  - Environment specifications ensure consistent package versions
+
+- All data sources are documented with URLs and access dates
+- Web scraping code includes error handling and rate limiting
+- Results are compared against multiple validation sources
+- Environment specifications ensure consistent package versions
 
 extensions_and_variations:
-  - "Apply similar techniques to other economic concepts or time periods"
-  - "Explore other alternative data sources (social media, satellite data, etc.)"
-  - "Develop real-time monitoring systems using these techniques"
-  - "Compare forecast accuracy across different alternative data sources"
-  - "Investigate cultural and linguistic biases in text-based economic indicators"
+
+- "Apply similar techniques to other economic concepts or time periods"
+- "Explore other alternative data sources (social media, satellite data, etc.)"
+- "Develop real-time monitoring systems using these techniques"
+- "Compare forecast accuracy across different alternative data sources"
+- "Investigate cultural and linguistic biases in text-based economic indicators"
 
 teaching_applications:
-  - "Data science courses: web scraping and API integration"
-  - "Economics courses: alternative data and nowcasting"
-  - "Research methods: validation and replication techniques"
-  - "Policy analysis: real-time economic monitoring"
 
-citation_context: |
-  This work builds on and references the broader literature on alternative data in economics,
-  including nowcasting techniques, textual analysis of economic content, and the evaluation
-  of unconventional economic indicators. It serves as both an educational resource and a
-  methodological contribution to the field.
+- "Data science courses: web scraping and API integration"
+- "Economics courses: alternative data and nowcasting"
+- "Research methods: validation and replication techniques"
+- "Policy analysis: real-time economic monitoring"
+
+### citation_context
+
+- This work builds on and references the broader literature on alternative data in economics, including nowcasting techniques, textual analysis of economic content, and the evaluation of unconventional economic indicators. It serves as both an educational resource and a methodological contribution to the field
+
 ---
 
-# Beyond the Streetlight: Alternative Data Sources in Economic Research
+## Beyond the Streetlight: Alternative Data Sources in Economic Research
 
 ## Project Overview
 

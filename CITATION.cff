@@ -23,7 +23,7 @@ references:
     title: "100 years of Economic Measurement in the Division of Research & Statistics: Beyond the streetlight"
     date: 2023-10-24 # required
     publisher: "R&S Centennial Conference"
-repository-code: https://github.com/dedwar65/beyond-the-streetlight # required
+repository-code: https://github.com/econ-ark/beyond-the-streetlight # required
 
 tags:
   - REMARK
