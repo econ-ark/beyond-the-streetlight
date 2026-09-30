@@ -3,12 +3,15 @@ import statsmodels.api as sm
 import matplotlib.pyplot as plt
 from statsmodels.stats.stattools import durbin_watson
 import os
+import sys
 
 abs_errors = pd.read_csv('data/output/errors.csv')
 
 # Convert the "date" column to datetime if not already in datetime format
 abs_errors['date'] = pd.to_datetime(abs_errors['date'])
-sample_size = 0 # set to 48 if you want to start with year 1995 Q1
+# Sample start: 1983 Q1 (full sample, the default) or 1995 Q1 (pass 1995)
+start_year = sys.argv[1] if len(sys.argv) > 1 else '1983'
+sample_size = {'1983': 0, '1995': 48}[start_year]
 ss_q = int(sample_size/4)
 
 # Now retain only the annual forecasts/actual changes and the date column
