@@ -1,0 +1,15 @@
+#!/bin/bash
+# Binder (repo2docker) runs this after creating the environment from
+# environment.yml. It installs the packages pinned in uv.lock into that
+# environment, so the notebook and scripts also work without `uv run`.
+set -euo pipefail
+trap 'rm -f /tmp/requirements.txt' EXIT
+
+uv export --frozen --no-hashes --no-dev -o /tmp/requirements.txt
+uv pip install --system -r /tmp/requirements.txt
+
+# Refuse to publish an image whose core packages do not import.
+python -c "import pandas, numpy, matplotlib, statsmodels, openpyxl, nbconvert" || {
+    echo "FATAL: locked packages failed to import; Binder environment is broken." >&2
+    exit 1
+}
