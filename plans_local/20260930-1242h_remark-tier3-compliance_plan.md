@@ -1,5 +1,13 @@
 # Plan: make econ-ark/beyond-the-streetlight a compliant Tier 3 REMARK
 
+**Status (2026-10-02): EXECUTED through step 8.** PR #1 was merged into `main` (7a83335)
+with all four CI jobs green and `cli.py lint --tier 3` reporting no errors. Steps 9-10
+(Zenodo DOI, releases v1.1.0/v1.1.1, catalog and website PRs) wait on the owner; they
+are tracked in `TODO.md`. Two departures from the plan:
+- Actions did not need enabling on the fork.
+- PR #2 (8c484e5) replaced the paper drafts with a citation of the published version,
+  FEDS 2025-019, which `REMARK.md` links via `identifiers-paper`.
+
 ## Context
 
 The repo was last touched on 2025-06-26/27. It was then made "strictly REMARK compliant" (tags v1.0.4, v1.0.5) against the **pre-tier** standard. Since then the standard has changed:
