@@ -632,3 +632,6 @@ private
 
 # Don't export locks
 ~lock
+
+# Local planning notes; not part of the published REMARK
+plans_local/
