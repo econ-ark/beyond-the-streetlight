@@ -12,7 +12,6 @@ __pycache__/
 
 # Not needed to reproduce the results
 plans_local/
-paper/
 references/
 about/
 *.pdf

@@ -15,24 +15,35 @@ keywords:
   - Economic measurement
 notebooks:
   - RS100_Discussion_Slides.ipynb
-title-original-paper: "100 years of Economic Measurement in the Division of Research & Statistics: Beyond the Streetlight"
+title-original-paper: "Beyond the Streetlight: Economic Measurement in the Division of Research and Statistics at the Federal Reserve"
 authors-original-paper:
   - Carol Corrado
   - Arthur Kennickell
+  - Tomaz Cajner
+identifiers-paper:
+  - type: doi
+    value: 10.17016/FEDS.2025.019
+  - type: url
+    value: https://doi.org/10.17016/FEDS.2025.019
 summary: >-
-  Christopher Carroll's discussion of Corrado and Kennickell at the Federal
-  Reserve's R&S Centennial Conference (November 2023), with code showing that
+  Christopher Carroll's discussion of Corrado, Kennickell and Cajner at the
+  Federal Reserve's R&S Centennial Conference (November 2023), with code showing that
   the errors in Greenbook and SPF forecasts of real consumption growth have
   trended down since 1983, while unemployment forecast errors show no trend.
 ---
 
 # Beyond the Streetlight
 
-This REMARK contains Christopher Carroll's discussion of Carol Corrado and
-Arthur Kennickell's paper "100 years of Economic Measurement in the Division of
-Research & Statistics: Beyond the Streetlight", presented at the Federal
-Reserve Board's R&S Centennial Conference on November 6-8, 2023, together with
-the code and data behind the discussion's figures.
+This REMARK contains Christopher Carroll's discussion, at the Federal Reserve
+Board's R&S Centennial Conference on November 6-8, 2023, of the paper by Carol
+Corrado and Arthur Kennickell, together with the code and data behind the
+discussion's figures. The paper's final version, with Tomaz Cajner as a third
+author, is Corrado, Kennickell and Cajner (2025), "Beyond the Streetlight:
+Economic Measurement in the Division of Research and Statistics at the Federal
+Reserve", Finance and Economics Discussion Series 2025-019,
+<https://doi.org/10.17016/FEDS.2025.019>. The conference draft was titled "100
+years of Economic Measurement in the Division of Research & Statistics: Beyond
+the Streetlight".
 
 ## The argument
 

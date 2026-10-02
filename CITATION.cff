@@ -3,10 +3,10 @@ message: If you use this software, please cite it as below.
 type: software
 title: Beyond the Streetlight
 abstract: >-
-  Materials for Christopher Carroll's discussion of Corrado and Kennickell,
-  "100 years of Economic Measurement in the Division of Research & Statistics:
-  Beyond the Streetlight", at the Federal Reserve's R&S Centennial Conference
-  (November 2023). The code analyzes the trend in the errors of the
+  Materials for Christopher Carroll's discussion of Corrado, Kennickell and
+  Cajner, "Beyond the Streetlight: Economic Measurement in the Division of
+  Research and Statistics at the Federal Reserve", at the Federal Reserve's
+  R&S Centennial Conference (November 2023). The code analyzes the trend in the errors of the
   Tealbook/Greenbook (GB) and Survey of Professional Forecasters (SPF)
   forecasts of the unemployment rate and of real growth in personal
   consumption expenditures from 1982 to 2017.
@@ -31,16 +31,23 @@ keywords:
   - Forecast errors
   - Economic measurement
 references:
-  - type: conference-paper
+  - type: report
     authors:
       - family-names: Corrado
         given-names: Carol
       - family-names: Kennickell
         given-names: Arthur
-    title: "100 years of Economic Measurement in the Division of Research & Statistics: Beyond the Streetlight"
-    year: 2023
-    month: 10
-    conference:
-      name: "R&S Centennial Conference, Board of Governors of the Federal Reserve System"
-      date-start: "2023-11-06"
-      date-end: "2023-11-08"
+      - family-names: Cajner
+        given-names: Tomaz
+    title: "Beyond the Streetlight: Economic Measurement in the Division of Research and Statistics at the Federal Reserve"
+    collection-title: Finance and Economics Discussion Series
+    number: "2025-019"
+    institution:
+      name: Board of Governors of the Federal Reserve System
+    year: 2025
+    month: 3
+    doi: 10.17016/FEDS.2025.019
+    url: "https://doi.org/10.17016/FEDS.2025.019"
+    notes: >-
+      Prepared for the R&S Centennial Conference, November 8, 2023, where
+      Christopher Carroll was a discussant.

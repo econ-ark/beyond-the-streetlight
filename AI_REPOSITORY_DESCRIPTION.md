@@ -5,10 +5,12 @@ full documentation; `CITATION.cff` and `REMARK.md` hold the formal metadata.
 
 ## What this is
 
-- Christopher Carroll's discussion (slides) of Carol Corrado and Arthur
-  Kennickell, "100 years of Economic Measurement in the Division of Research &
-  Statistics: Beyond the Streetlight", Federal Reserve Board R&S Centennial
-  Conference, November 6-8, 2023.
+- Christopher Carroll's discussion (slides) of a paper by Carol Corrado and
+  Arthur Kennickell at the Federal Reserve Board R&S Centennial Conference,
+  November 6-8, 2023. Its final version is Corrado, Kennickell and Cajner
+  (2025), "Beyond the Streetlight: Economic Measurement in the Division of
+  Research and Statistics at the Federal Reserve", FEDS 2025-019,
+  https://doi.org/10.17016/FEDS.2025.019. The paper is not in this repository.
 - The code and data behind the discussion's figures, by Decory Edwards and
   Christopher Carroll (Johns Hopkins University).
 - An Econ-ARK REMARK, targeting Tier 3 of the REMARK standard.

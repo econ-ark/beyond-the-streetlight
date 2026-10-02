@@ -1,7 +1,7 @@
 [project]
 name = "beyond-the-streetlight"
 version = "1.1.0"
-description = "Trends in Greenbook and SPF forecast errors, 1983-2018: materials for Carroll's discussion of Corrado and Kennickell (2023), 'Beyond the Streetlight'"
+description = "Trends in Greenbook and SPF forecast errors, 1983-2018: materials for Carroll's discussion of Corrado, Kennickell and Cajner, 'Beyond the Streetlight' (FEDS 2025-019)"
 readme = "README.md"
 license = "Apache-2.0"
 authors = [

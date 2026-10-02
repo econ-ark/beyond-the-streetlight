@@ -6,12 +6,20 @@
 **Repository**: <https://github.com/econ-ark/beyond-the-streetlight>
 **Slides**: <https://econ-ark.github.io/beyond-the-streetlight/>
 
-This repository contains Christopher Carroll's discussion of Carol Corrado and
-Arthur Kennickell, "100 years of Economic Measurement in the Division of
-Research & Statistics: Beyond the Streetlight", presented at the Federal
+This repository contains Christopher Carroll's discussion, at the Federal
 Reserve Board's [R&S Centennial Conference](https://www.federalreserve.gov/conferences/rs-centennial-conference.htm)
-on November 6-8, 2023, together with the data and code behind the
-discussion's figures.
+on November 6-8, 2023, of the paper by Carol Corrado and Arthur Kennickell,
+together with the data and code behind the discussion's figures. The final
+version of the paper, with Tomaz Cajner as a third author, is:
+
+> Corrado, Carol, Arthur Kennickell, and Tomaz Cajner (2025). "Beyond the
+> Streetlight: Economic Measurement in the Division of Research and Statistics
+> at the Federal Reserve," Finance and Economics Discussion Series 2025-019.
+> Washington: Board of Governors of the Federal Reserve System,
+> <https://doi.org/10.17016/FEDS.2025.019>.
+
+At the conference the draft was titled "100 years of Economic Measurement in
+the Division of Research & Statistics: Beyond the Streetlight".
 
 ## Overview
 
@@ -188,7 +196,6 @@ data/output/      intermediate data sets
 results/          regression summaries
 figures/          figures
 RS100_Discussion_Slides.ipynb   the slides (reveal.js, via nbconvert)
-paper/            drafts of the Corrado and Kennickell paper under discussion
 references/       the 1997 Economic Report of the President (cited in the slides)
 about/            the conference agenda and invitation
 ```
