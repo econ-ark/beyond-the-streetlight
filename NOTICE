@@ -7,8 +7,6 @@ Not covered by that license, and included only for reference:
 - data/raw/: forecast data from the Federal Reserve Bank of Philadelphia
   (Greenbook data set and Survey of Professional Forecasters) and a snapshot of
   series from FRED, Federal Reserve Bank of St. Louis; their providers' terms apply.
-- paper/: drafts of Corrado and Kennickell, "100 years of Economic Measurement in
-  the Division of Research & Statistics: Beyond the Streetlight" (2023).
 - references/ and about/: third-party documents (the 1997 Economic Report of the
   President; the R&S Centennial Conference agenda and invitation).
 - figures/ev_uncertainty.png and figures/ngram-new-economy.png: images from
