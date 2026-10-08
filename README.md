@@ -164,6 +164,43 @@ These files are not produced by the code:
   script makes.
 - `RS100_Discussion_Slides.pdf` is a static export of the slides.
 
+## Using this repository as a slide template
+
+The deck is an ordinary Jupyter notebook, `RS100_Discussion_Slides.ipynb`,
+made of Markdown cells; nothing in it runs code. To start a deck of your own,
+copy the notebook and the images it uses from `figures/`, then:
+
+- **Mark cells.** In JupyterLab, open the Property Inspector (the gear icon in
+  the right sidebar) and set each cell's **Slide Type**: *Slide* begins a new
+  slide, *Sub-slide* a slide reached by moving down, *Fragment* adds the cell
+  to the current slide one keypress at a time, *Skip* leaves it out, and
+  *Notes* makes it speaker notes.
+- **Present.** With [jupyterlab-rise](https://github.com/jupyterlab-contrib/rise)
+  installed (`pip install jupyterlab-rise`), click the slideshow button in the
+  notebook toolbar or press Alt+R.
+- **Export.** `jupyter nbconvert --to slides RS100_Discussion_Slides.ipynb`
+  writes `RS100_Discussion_Slides.slides.html`, a reveal.js deck; the same
+  export is File → Save and Export Notebook As → Reveal.js Slides in
+  JupyterLab. The HTML loads reveal.js from a CDN and refers to the images in
+  `figures/` by relative path, so keep them beside it. `reproduce.sh` runs
+  this export after the analysis.
+- **Publish.** Commit the exported deck as `index.html`. This repository's
+  GitHub Pages site is built from the root of `main` (Settings → Pages →
+  Deploy from a branch), so the deck appears at
+  <https://econ-ark.github.io/beyond-the-streetlight/> after a push.
+- **PDF.** Open the deck with `?print-pdf` added to its address,
+  <https://econ-ark.github.io/beyond-the-streetlight/?print-pdf>, and print it
+  to a PDF file from the browser. Each fragment step becomes a page of its
+  own. Equations are typeset after the page loads, so check in the print
+  preview that they appear, and reload the page if one is blank.
+  `RS100_Discussion_Slides.pdf` was made this way.
+- **Speaker notes.** Write them in cells whose slide type is *Notes*. While
+  presenting, in RISE or in the exported deck, press S to open the speaker
+  view.
+
+Each `<img>` in the notebook carries `alt` text describing the image for
+readers who cannot see it; do the same in your own deck.
+
 ## Data availability
 
 ### Included data
