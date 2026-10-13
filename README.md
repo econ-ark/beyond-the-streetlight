@@ -1,10 +1,13 @@
 # Beyond the Streetlight
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23352415.svg)](https://doi.org/10.5281/zenodo.23352415)
+
 **Authors**: Decory Edwards and Christopher D. Carroll (Johns Hopkins University)
 **Keywords**: forecast errors, Greenbook, Survey of Professional Forecasters, economic measurement
 **Status**: Published REMARK (Tier 3) under the [Econ-ARK REMARK standard](https://github.com/econ-ark/REMARK/blob/main/STANDARD.md)
 **Repository**: <https://github.com/econ-ark/beyond-the-streetlight>
 **Slides**: <https://econ-ark.github.io/beyond-the-streetlight/>
+**DOI**: [10.5281/zenodo.23352415](https://doi.org/10.5281/zenodo.23352415) (Zenodo; resolves to the latest archived version)
 
 This repository contains Christopher Carroll's discussion, at the Federal
 Reserve Board's [R&S Centennial Conference](https://www.federalreserve.gov/conferences/rs-centennial-conference.htm)
