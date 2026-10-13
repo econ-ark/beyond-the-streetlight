@@ -4,6 +4,7 @@ remark-name: beyond-the-streetlight
 title: Beyond the Streetlight
 tier: 3
 github_repo_url: https://github.com/econ-ark/beyond-the-streetlight
+doi: 10.5281/zenodo.23352415
 tags:
   - REMARK
   - Reproduction
