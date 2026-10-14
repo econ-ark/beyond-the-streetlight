@@ -252,13 +252,6 @@ about/            the conference agenda and invitation
 After changing parameters, `code/main/reproduce.py --no-verify` reruns the
 pipeline without comparing against the committed outputs.
 
-## Known issues
-
-`code/other/diff_abse_reg.py` reads `data/output/errors.csv`, which holds
-squared errors, so its results duplicate those of `diff_sqe_reg.py`. The
-committed `results/diff_abse_reg_*.txt` were produced this way, so the script
-is kept as it is.
-
 ## License and citation
 
 The code is licensed under the Apache License 2.0 (`LICENSE`); `NOTICE` lists
