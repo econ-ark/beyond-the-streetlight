@@ -5,7 +5,7 @@ from statsmodels.stats.stattools import durbin_watson
 import os
 import sys
 
-abs_errors = pd.read_csv('data/output/errors.csv')
+abs_errors = pd.read_csv('data/output/abs_errors.csv')
 
 # Convert the "date" column to datetime if not already in datetime format
 abs_errors['date'] = pd.to_datetime(abs_errors['date'])
@@ -20,7 +20,7 @@ data = abs_errors.iloc[sample_size:, [1] + list(range(-6, 0))]
 # Create a constant term for the regression
 data['Constant'] = 1
 
-# List of squared error column names to perform regressions on
+# GB absolute error minus SPF absolute error, for each variable
 diff_abse_cols = ["diff_error_unemp","diff_error_cons"]
 
 # Extract year and quarter as separate variables
@@ -34,7 +34,7 @@ fig, axes = plt.subplots(1, 2, figsize=(12, 4))
 output_dir = 'results'
 summary_text = ""
 
-# Loop through the squared error columns
+# Loop through the absolute-error differences
 for i, diff_abse_col in enumerate(diff_abse_cols):
     model = sm.OLS(data[diff_abse_col], data[['Constant', 'Year_d']])
     results = model.fit(cov_type="HC3")
