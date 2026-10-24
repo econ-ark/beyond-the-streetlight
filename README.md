@@ -56,6 +56,10 @@ a long improvement in forecasting at the Fed and elsewhere.
 - The two slides "Tertiary Data from Philly Fed and FRED" show the
   consumption-error results (`figures/abse_reg_1983_GB_cons_only.png` and
   `figures/abse_reg_1983_SPF_cons_only.png`).
+- The two slides before them, "The Data: Forecasts and What Happened" and
+  "From Forecasts to Errors, in pandas", say where the data come from and which
+  pandas steps turn them into the errors. They were added in October 2026,
+  after the conference.
 
 ## Quick start
 
@@ -172,6 +176,11 @@ These files are not produced by the code:
 The deck is an ordinary Jupyter notebook, `RS100_Discussion_Slides.ipynb`,
 made of Markdown cells; nothing in it runs code. To start a deck of your own,
 copy the notebook and the images it uses from `figures/`, then:
+
+- **Show the data and the method.** A deck that presents results should say
+  what the data are and how they become the results. Here the slides "The
+  Data: Forecasts and What Happened" and "From Forecasts to Errors, in pandas"
+  do that, before the two figures.
 
 - **Mark cells.** In JupyterLab, open the Property Inspector (the gear icon in
   the right sidebar) and set each cell's **Slide Type**: *Slide* begins a new
