@@ -7826,6 +7826,78 @@ main {
 </div>
 </div>
 </div></div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=data-sources">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 style="text-align: center;">The Data: Forecasts and What Happened</h3>
+<p><strong>Forecasts</strong> made each quarter, 1982Q1 to 2017Q4 (144 quarters), from the <a href="https://www.philadelphiafed.org/surveys-and-data/real-time-data-research">Philadelphia Fed</a></p>
+<ul>
+<li><strong>Greenbook/Tealbook (GB)</strong>: the Fed staff's forecast, from the later of each quarter's two Greenbooks, which is more likely to come after the SPF's survey (Greenbooks become public after five years)</li>
+<li><strong>Survey of Professional Forecasters (SPF)</strong>: the mean forecast</li>
+<li>Each forecasts real PCE growth (annualized) for this quarter and the next three, and the unemployment rate for this quarter and four quarters ahead</li>
+</ul>
+<p><strong>What happened</strong>, from <a href="https://fred.stlouisfed.org">FRED</a>, retrieved 2023-11-03</p>
+<ul>
+<li><code>UNRATE</code>: the unemployment rate, averaged over each quarter</li>
+<li><code>DPCERA3Q086SBEA</code>: real PCE, as annualized quarterly growth</li>
+</ul>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=data-to-errors">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 style="text-align: center;">From Forecasts to Errors, in pandas</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Step</th>
+<th style="text-align:left">In the code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Read a forecaster's spreadsheet, one sheet per variable</td>
+<td style="text-align:left"><code>pd.ExcelFile(path).parse("gRPCE")</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Keep the later Greenbook in each quarter</td>
+<td style="text-align:left"><code>results_df.iloc[1::2]</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Year-ahead forecast: the mean of the four quarterly forecasts</td>
+<td style="text-align:left"><code>GB_cons.mean(axis=1)</code></td>
+</tr>
+<tr>
+<td style="text-align:left">What happened: growth averaged over the same four quarters</td>
+<td style="text-align:left"><code>FRED[col].rolling(window=4).mean()</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Unemployment: the forecast and the actual four-quarter change</td>
+<td style="text-align:left"><code>UNEMPF4 - UNEMPF0</code> and <code>FRED[col].diff(periods=4)</code></td>
+</tr>
+<tr>
+<td style="text-align:left">The absolute error</td>
+<td style="text-align:left"><code>np.abs(forecast - actual)</code></td>
+</tr>
+<tr>
+<td style="text-align:left">Its trend: <code>X</code> is a constant and the year minus its mean</td>
+<td style="text-align:left"><code>sm.OLS(error, X).fit(cov_type="HC3")</code></td>
+</tr>
+</tbody>
+</table>
+<p><small>The scripts are in <code>code/main/</code>. They line the series up by row position, after <code>reset_index(drop=True)</code>, and date each forecast four quarters after it was made, so the forecasts made in 1982Q1–2017Q4 are plotted as 1983–2018.</small></p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=27662d0c-f2c6-4cde-b741-ef6d85b0fb91">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
