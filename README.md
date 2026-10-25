@@ -213,6 +213,21 @@ copy the notebook and the images it uses from `figures/`, then:
 Each `<img>` in the notebook carries `alt` text describing the image for
 readers who cannot see it; do the same in your own deck.
 
+## Learning pandas from this analysis
+
+`From_Forecasts_to_Errors.ipynb` rebuilds the result in "Fed Error Over Time" (the Greenbook's
+consumption-forecast errors and their trend) from the raw spreadsheets, one pandas DataFrame idea at a
+time: reading Excel sheets, selecting rows and columns, a quarterly date index, averaging across
+columns, `rolling` and `shift`, lining series up by date, `describe`, `groupby` and a regression. It
+reads only `data/raw/`, writes nothing, and compares its errors with the scripts' committed ones.
+
+The comparison also shows a weakness of selecting rows by position. `parse_GB_raw_data.py` keeps every
+other row, `iloc[1::2]`, to get the later of each quarter's two Greenbooks. But from 1983 to 1987 the
+second quarter had one Greenbook and the third had three, so in those five years the second quarter's
+forecast comes from July's Greenbook. Selecting by date changes those five errors and moves the
+Greenbook's consumption trend from -0.0393 to -0.0388 percentage points a year; nothing from 1995 on
+changes.
+
 ## Data availability
 
 ### Included data
@@ -245,6 +260,7 @@ data/output/      intermediate data sets
 results/          regression summaries
 figures/          figures
 RS100_Discussion_Slides.ipynb   the slides (reveal.js, via nbconvert)
+From_Forecasts_to_Errors.ipynb  the Greenbook's consumption errors rebuilt step by step in pandas
 references/       the 1997 Economic Report of the President (cited in the slides)
 about/            the conference agenda and invitation
 ```

@@ -16,6 +16,7 @@ keywords:
   - Economic measurement
 notebooks:
   - RS100_Discussion_Slides.ipynb
+  - From_Forecasts_to_Errors.ipynb
 title-original-paper: "Beyond the Streetlight: Economic Measurement in the Division of Research and Statistics at the Federal Reserve"
 authors-original-paper:
   - Carol Corrado
