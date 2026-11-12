@@ -1,7 +1,8 @@
 #!/bin/bash
 # Binder (repo2docker) runs this after creating the environment from
 # environment.yml. It installs the packages pinned in uv.lock into that
-# environment, so the notebook and scripts also work without `uv run`.
+# environment, so the notebook and scripts also work without `uv run`, and
+# then RISE, for presenting the slides.
 set -euo pipefail
 trap 'rm -f /tmp/requirements.txt' EXIT
 
@@ -11,5 +12,23 @@ uv pip install --system -r /tmp/requirements.txt
 # Refuse to publish an image whose core packages do not import.
 python -c "import pandas, numpy, matplotlib, statsmodels, openpyxl, nbconvert" || {
     echo "FATAL: locked packages failed to import; Binder environment is broken." >&2
+    exit 1
+}
+
+# RISE, so the slideshow button (Alt+R) works on Binder. It is a presentation
+# tool, not part of the analysis, so it is pinned here rather than in uv.lock.
+# It must go into the environment that runs JupyterLab ($NB_PYTHON_PREFIX),
+# which can differ from the one above: RISE serves the slideshow from the
+# Jupyter server itself, at <Binder's address>/rise/<notebook>.
+echo "Installing jupyterlab-rise into JupyterLab's environment: ${NB_PYTHON_PREFIX}"
+"${NB_PYTHON_PREFIX}/bin/python" -m pip install --no-cache-dir jupyterlab-rise==0.43.1
+
+# Refuse to publish an image whose slideshow button would not work.
+"${NB_PYTHON_PREFIX}/bin/jupyter" server extension list 2>&1 | grep -E 'jupyterlab_rise .*enabled' || {
+    echo "FATAL: the RISE server extension is not enabled; the slideshow would not open." >&2
+    exit 1
+}
+"${NB_PYTHON_PREFIX}/bin/jupyter" labextension list 2>&1 | grep -E 'jupyterlab-rise .*enabled' || {
+    echo "FATAL: the RISE JupyterLab extension is not enabled; there would be no slideshow button." >&2
     exit 1
 }
